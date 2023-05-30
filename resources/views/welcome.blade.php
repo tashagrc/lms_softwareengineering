@@ -5,47 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+  
+<nav>
+  <div class="logo">
+    <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
+  </div>
+  <div class="buttons">
+    <button class="regis">Register</button>
+    <button class="login">Login ></button>
   </div>
 </nav>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-left">
+      <h2>Literacy starts</h2>
+      <div class="from-pas">
+        <h1>from</h1>
+        <h1 class="warna-pas">PASSION</h1>
+      </div>
+      <button class="read-now">Read now</button>
+    </div>
+    <div class="col-right">
+      <div class="img-chat1">
+        <p>The LMS literature app revolutionized my approach to literature, offering a comprehensive collection of texts and interactive features that deepened my knowledge and fostered my love for reading</p>
+        <img src="{{ asset('img/chatimg1.png') }}" alt="description of myimage">
+      </div>
+      <div class="img-chat2">
+        <img src="{{ asset('img/chatimg2.png') }}" alt="description of myimage">
+        <p>Literacy with games just makes it more fun to comprehend and engaging for further reading. I am overall eager to read more beyond lessons!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
 </body>
 </html>
