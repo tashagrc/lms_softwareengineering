@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Resource extends Model
 {
     use HasFactory;
+
+    public function sessions() {
+        return $this->belongsTo(Session::class);
+    }
+
+    public function courses() {
+        return $this->belongsTo(Course::class);
+    }
 }
