@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingPage');
 });
 
 Route::get('/login', function () {
@@ -23,4 +23,12 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::get('/navbarOne', function () {
+    return view('navbarOne');
+});
+
+Route::get('/navbarTwo', function () {
+    return view('navbarTwo');
 });
