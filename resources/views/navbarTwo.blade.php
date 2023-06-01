@@ -16,36 +16,46 @@
             </div>
             <div class="pages-bar">
                 <div class="section-1">
-                    <div class="dashboard">
-                        <img src="{{ asset('img/home.png') }}" alt="description of myimage">
-                        <p>Dashboard</p>
-                    </div>
-                    <div class="course">
-                        <img src="{{ asset('img/course.png') }}" alt="description of myimage">
-                        <p>Courses</p>
-                    </div>
-                    <div class="quiz">
-                        <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">
-                        <p>Quiz</p>
-                    </div>
-                    <div class="grade">
-                        <img src="{{ asset('img/grade.png') }}" alt="description of myimage">
-                        <p>Grade</p>
-                    </div>
+                    <a href="" class="button-link">
+                        <div class="dashboard">
+                            <img src="{{ asset('img/home.png') }}" alt="description of myimage">
+                            <p>Dashboard</p>
+                        </div>
+                    </a>
+                    <a href="" class="button-link">
+                        <div class="course">
+                            <img src="{{ asset('img/course.png') }}" alt="description of myimage">
+                            <p>Courses</p>
+                        </div>
+                    </a> 
+                    <a href="" class="button-link">
+                        <div class="quiz">
+                            <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">
+                            <p>Quiz</p>
+                        </div>
+                    </a>
+                    <a href="" class="button-link">
+                        <div class="grade">
+                            <img src="{{ asset('img/grade.png') }}" alt="description of myimage">
+                            <p>Grade</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="setting">
-                    <img src="{{ asset('img/setting.png') }}" alt="description of myimage">
-                    <p>Settings</p>
-                </div>
+                <a href="" class="button-link">
+                    <div class="setting">
+                        <img src="{{ asset('img/setting.png') }}" alt="description of myimage">
+                        <p>Settings</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="right-bar">
             <div class="title">
-                <h1>My Courses</h1>
+                <h1>Nama Page</h1>
             </div>
             <div class="detail-row">
-                <img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti">
-                <img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save">
+                <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
+                <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
                 <img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp">
             </div>
         </div>
