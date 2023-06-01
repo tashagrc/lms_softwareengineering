@@ -57,8 +57,7 @@ nav {
   .row{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    margin-top: 100px;
+    margin-top: 140px;
   }
 
   .from-pas{
@@ -71,82 +70,12 @@ nav {
   .col-left{
     width: 50%;
     /* text-align: center; */
-    margin-left: 10%;
-  }
-
-  .col-left h2{
-    margin: 0px;
-    font-size: 40px;
-  }
-
-  .col-left h1{
-    font-size: 60px;
-    margin: 5px 0px 0px 0px;
-  }
-
-  .warna-pas{
-    color: #C93B25;
-    padding-left: 10px;
-  }
-
-  .read-now{
-    width: 250px;
-    height: 55px;
-    background-color: #C93B25;
-    border-radius: 18px;
-    color: white;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    border: none;
-    margin-top: 50px;
+    margin-left: 12%;
   }
 
   .col-right{
     width: 50%;
-    margin-right: 100px;
-  }
-
-  .img-chat1{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .img-chat1 img{
-    width: 100px;
-    height: 100px;
-  }
-
-  .img-chat1 p{
-    width: 50%;
-    font-size: 14px;
-    background-color: #FBF8F7;
-    border-radius: 18px;
-    /* margin-right: 80px; */
-    padding: 20px 30px;
-  }
-
-  .img-chat2{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .img-chat2 img{
-    width: 100px;
-    height: 100px;
-  }
-
-  .img-chat2 p{
-    width: 50%;
-    font-size: 14px;
-    background-color: #FBF8F7;
-    border-radius: 18px;
-    /* margin-left: 80px; */
-    padding: 20px 30px;
+    margin-right: 50px;
   }
 
 .regis:hover{
@@ -154,5 +83,80 @@ nav {
 }
 
 .login:hover{
+    cursor: pointer;
+}
+
+.img-login{
+    width: 550px;
+}
+
+.headingLogin{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    color: #C93B25;
+    margin: 0px 0px 40px 0px;
+}
+
+.spaceInput{
+    padding-bottom: 40px;
+}
+
+.lblEmail{
+    display:block;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.lengthBox{
+    width: 550px;
+    height: 40px;
+    padding: 1px 10px 1px 15px;
+    font-size: 1rem;
+    background: #F8F9FA;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.sectionPass{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.form{
+    margin-right: 120px;
+}
+
+.lblPassword{
+    display:block;
+}
+
+.lblChangePassword{
+    color:#C93B25;
+}
+
+.lblChangePassword:hover{
+    cursor: pointer;
+}
+
+.sbtLogin{
+    width: 220px;
+    height: 45px;
+    background-color: #C93B25;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    margin-top: 30px;
+}
+
+.sbtLogin:hover{
     cursor: pointer;
 }

@@ -7,16 +7,17 @@
     <title>Document</title>
     <!-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+
 </head>
 <body>
-  
+
 <nav>
   <div class="logo">
     <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
   </div>
   <div class="buttons">
-    <button class="regis">Register</button>
-    <button class="login">Login ></button>
+    <a href="/register"><button class="regis">Register</button></a>
+    <a href="/login"><button class="login">Login ></button></a>
   </div>
 </nav>
 
@@ -28,7 +29,7 @@
         <h1>from</h1>
         <h1 class="warna-pas">PASSION</h1>
       </div>
-      <button class="read-now">Read now</button>
+      <a href="/login"> <button class="read-now">Read now</button></a>
     </div>
     <div class="col-right">
       <div class="img-chat1">
