@@ -1,4 +1,20 @@
-let x = 0, y = 0
+let x = 0, y = 0, a = 0, b = 0
+
+const specialChar = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~0-9]/;
+
+const tagName = document.querySelector("#name");
+
+tagName.addEventListener("input", ()=>{
+    const name = tagName.value;
+    if(!tagName.value || tagName.value.length == 0 || tagName.value.trim().length == 0 || specialChar.test(tagName.value)){
+        document.getElementById("valName").style.display="block";
+        a = 0;
+    } else{
+        document.getElementById("valName").style.display="none";
+        a=1;
+    }
+}
+)
 
 const tagEmail = document.querySelector("#email");
 
@@ -44,5 +60,23 @@ tagPassword.addEventListener("input", ()=>{
     }
 })
 
+const tagCPassword = document.querySelector("#cpass");
 
+function confPassVal(){
+    var pass = document.getElementById("password").value;
+    var confpass = document.getElementById("cpass").value;
+    if(pass === confpass){
+        return true
+    }
+    return false
+}
 
+tagCPassword.addEventListener("input", ()=>{
+    if(!confPassVal()){
+        document.getElementById("valCPass").style.display="block";
+        b=0;
+    }else{
+        document.getElementById("valCPass").style.display="none";
+        b=1;
+    }
+})

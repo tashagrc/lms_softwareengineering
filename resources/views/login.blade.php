@@ -1,3 +1,5 @@
+@extends('layouts.navbarRegister')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,45 +12,39 @@
 </head>
 <body>
 
-<nav>
-  <div class="logo">
-    <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
-  </div>
-  <div class="buttons">
-    <button class="regis">Register</button>
-    <button class="login">Login ></button>
-  </div>
-</nav>
-
+@section('container')
 <div class="container">
-  <div class="row">
-    <div class="col-left">
-      <img src="img/loginImg.png" class ="img-login">
-    </div>
-    <div class="col-right">
-        <div class="form">
-            <p class ="headingLogin"> Login </p>
-            <div class="form-login">
-                <div class="spaceInput">
-                    <label class ="lblEmail"> Email address </label>
-                    <input type="email" id="Email" name ="email" class = "lengthBox" autocomplete="off">
-                    <p class ="warningEmail" id="warnEmail">*Invalid Email</p>
-                </div>
-                <div class="spaceInput">
-                    <div class="sectionPass">
-                        <label class="lblPassword"> Password </label>
-                        <label class="lblChangePassword"> Forgot Password? </label>
-                    </div>
-                    <input type="password" id="name" name ="name" class = "lengthBox" autocomplete="off">
-                </div>
-            </div>
-            <div>
-                <a> <button class="sbtLogin"> Login </button> </a>
-            </div>
-        </div>
+    <div class="row">
+      <div class="col-left">
+        <img src="img/loginImg.png" class ="img-login">
+      </div>
+      <div class="col-right">
+          <div class="form">
+              <p class ="headingLogin"> Login </p>
+              <div class="form-login">
+                  <div class="spaceInput">
+                      <label class ="lblEmail"> Email address </label>
+                      <input type="email" id="email" name ="email" class = "lengthBox" autocomplete="off">
+                      <p id="valEmail">*Invalid Email</p>
+                  </div>
+                  <div class="spaceInput">
+                      <div class="sectionPass">
+                          <label class="lblPassword"> Password </label>
+                          <label class="lblChangePassword"> Forgot Password? </label>
+                      </div>
+                      <input type="password" id="password" name ="password" class = "lengthBox" autocomplete="off">
+                      <p id="valPass">*Invalid Password</p>
+                  </div>
+              </div>
+              <div>
+                  <a> <button class="sbtLogin"> Login </button> </a>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
-</div>
-    <script src="js/login.js"></script>
-</body>
-</html>
+      <script src="js/login.js"></script>
+  </body>
+  </html>
+@endsection
+

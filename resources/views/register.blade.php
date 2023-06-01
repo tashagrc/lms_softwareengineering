@@ -1,3 +1,5 @@
+@extends('layouts.navbarOne')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +12,7 @@
 </head>
 <body>
 
-<nav>
-  <div class="logo">
-    <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
-  </div>
-  <div class="buttons">
-    <button class="regis">Register</button>
-    <button class="login">Login ></button>
-  </div>
-</nav>
-
+@section('container')
 <div class="container">
   <div class="row">
     <div class="col-left">
@@ -32,18 +25,22 @@
                 <div class="spaceInput">
                     <label class ="lbl"> Name </label>
                     <input type="text" id="name" name ="name" class = "lengthBox" autocomplete="off">
+                    <p id="valName">*Name can't contain special characters </p>
                 </div>
                 <div class="spaceInput">
                     <label class ="lbl"> Email address </label>
-                    <input type="text" id="name" name ="name" class = "lengthBox" autocomplete="off">
+                    <input type="text" id="email" name ="email" class = "lengthBox" autocomplete="off">
+                    <p id="valEmail">*Email must contain @ and ends with .com </p>
                 </div>
                 <div class="spaceInput">
                     <label class ="lbl"> Password </label>
-                    <input type="password" id="name" name ="name" class = "lengthBox" autocomplete="off">
+                    <input type="password" id="password" name ="password" class = "lengthBox" autocomplete="off">
+                    <p id="valPass">*Password must contain at least one uppercase letter, one lowercase letter, one number and one special character</p>
                 </div>
                 <div class="spaceInput">
                     <label class ="lbl"> Confirm Password </label>
-                    <input type="password" id="name" name ="name" class = "lengthBox" autocomplete="off">
+                    <input type="password" id="cpass" name ="cpass" class = "lengthBox" autocomplete="off">
+                    <p id="valCPass">*The confirmed password does not match the entered password. </p>
                 </div>
             </div>
             <div>
@@ -51,25 +48,8 @@
             </div>
         </div>
     </div>
-
-
-
-      {{-- <div class="img-chat1">
-        <p>The LMS literature app revolutionized my approach to literature, offering a comprehensive collection of texts and interactive features that deepened my knowledge and fostered my love for reading</p>
-        <img src="{{ asset('img/chatimg1.png') }}" alt="description of myimage">
-      </div>
-      <div class="img-chat2">
-        <img src="{{ asset('img/chatimg2.png') }}" alt="description of myimage">
-        <p>Literacy with games just makes it more fun to comprehend and engaging for further reading. I am overall eager to read more beyond lessons!</p>
-      </div> --}}
-    </div>
-  </div>
-</div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
+    <script src="js/register.js"></script>
 </body>
 </html>
+@endsection
+

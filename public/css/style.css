@@ -4,6 +4,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.combineButton{
+
+}
+
+a{
+    text-decoration: none;
+}
+
 body{
   margin: 0px;
 }
@@ -41,6 +49,19 @@ nav {
     border: none;
 }
 
+.regis a{
+    width: 90px;
+    height: 35px;
+    background-color: #404040;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
+
   .login{
     width: 90px;
     height: 35px;
@@ -53,6 +74,19 @@ nav {
     font-size: 15px;
     border: none;
   }
+
+.login a{
+    width: 90px;
+    height: 35px;
+    background-color: #C93B25;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
 
 .regis:hover{
     cursor: pointer;
@@ -111,6 +145,18 @@ nav {
     margin-top: 50px;
   }
 
+  .read-now a{
+    background-color: #C93B25;
+    border-radius: 18px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    border: none;
+    margin-top: 50px;
+  }
+
   .col-right{
     width: 50%;
     margin-right: 100px;
@@ -142,7 +188,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+
   }
 
   .img-chat2 img{

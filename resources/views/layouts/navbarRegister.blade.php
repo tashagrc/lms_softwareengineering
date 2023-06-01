@@ -8,20 +8,21 @@
     <link href="{{ asset('/css/navbarOne.css') }}" rel="stylesheet">
 </head>
 <body>
-    
     <nav>
         <div class="logo">
-          <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
+          <a href="/"> <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage"> </a>
         </div>
         <div class="text-row">
             <div class="black-text">
-                <p>Don't have an account?</p>
+                <p>Already have an account?</p>
             </div>
             <div class="red-text">
-                <a href=""><p>Sign up first</p></a>
+                <a href="/register"><p>Login here</p></a>
             </div>
         </div>
       </nav>
-
+      <div>
+        @yield('container')
+      </div>
 </body>
 </html>
