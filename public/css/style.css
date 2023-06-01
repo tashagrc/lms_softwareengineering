@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 *{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -124,6 +126,7 @@ nav {
     border-radius: 18px;
     /* margin-right: 80px; */
     padding: 20px 30px;
+    font-weight: 500;
   }
 
   .img-chat2{
@@ -145,6 +148,7 @@ nav {
     border-radius: 18px;
     /* margin-left: 80px; */
     padding: 20px 30px;
+    font-weight: 500;
   }
 
 
