@@ -33,8 +33,9 @@ nav {
     padding-right: 8px;
 }
 
-.red-text{
+.red-text a{
     color: #C93B25;
     font-size: 15px;
+    text-decoration: none;
 }
 
