@@ -32,3 +32,11 @@ Route::get('/navbarOne', function () {
 Route::get('/navbarTwo', function () {
     return view('navbarTwo');
 });
+
+Route::get('/navbarThree', function () {
+    return view('navbarThree');
+});
+
+Route::get('/navbarFour', function () {
+    return view('navbarFour');
+});
