@@ -160,3 +160,9 @@ nav {
 .sbtLogin:hover{
     cursor: pointer;
 }
+
+#warnEmail{
+    display: none;
+    color: red;
+    margin-bottom: 10px;
+}

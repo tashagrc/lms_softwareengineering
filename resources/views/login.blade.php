@@ -31,7 +31,8 @@
             <div class="form-login">
                 <div class="spaceInput">
                     <label class ="lblEmail"> Email address </label>
-                    <input type="text" id="name" name ="name" class = "lengthBox" autocomplete="off">
+                    <input type="email" id="Email" name ="email" class = "lengthBox" autocomplete="off">
+                    <p class ="warningEmail" id="warnEmail">*Invalid Email</p>
                 </div>
                 <div class="spaceInput">
                     <div class="sectionPass">
@@ -46,25 +47,8 @@
             </div>
         </div>
     </div>
-
-
-
-      {{-- <div class="img-chat1">
-        <p>The LMS literature app revolutionized my approach to literature, offering a comprehensive collection of texts and interactive features that deepened my knowledge and fostered my love for reading</p>
-        <img src="{{ asset('img/chatimg1.png') }}" alt="description of myimage">
-      </div>
-      <div class="img-chat2">
-        <img src="{{ asset('img/chatimg2.png') }}" alt="description of myimage">
-        <p>Literacy with games just makes it more fun to comprehend and engaging for further reading. I am overall eager to read more beyond lessons!</p>
-      </div> --}}
-    </div>
   </div>
 </div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
+    <script src="js/login.js"></script>
 </body>
 </html>
