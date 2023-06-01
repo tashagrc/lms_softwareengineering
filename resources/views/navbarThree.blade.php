@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/navbarThree.css') }}" rel="stylesheet">
 </head>
 <body>
     
@@ -56,7 +56,6 @@
             <div class="detail-row">
                 <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
                 <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
-                <img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp">
             </div>
         </div>
     </div>
