@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/navbarFour.css') }}" rel="stylesheet">
+
 </head>
 <body>
     
@@ -49,14 +50,64 @@
                 </a>
             </div>
         </div>
-        <div class="right-bar">
+        <div class="middle-bar">
             <div class="title">
                 <h1>Nama Page</h1>
             </div>
+        </div>
+        <div class="right-bar">
             <div class="detail-row">
                 <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
                 <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
-                <img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp">
+            </div>
+            <div class="user-profile">
+                <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp">
+                <h1 class="nama">Hi, NAMA</h1>
+                <div class="badge">
+                    <img src="{{ asset('img/star.png') }}" alt="description of myimage" class="star">
+                    <p>Warrior</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="title-progress">
+                    <p>Earn 1200 xp to be a</p>
+                    <h5>Legend</h5>
+                </div>
+                <div class="progress-bar">
+                    <div id="bar"></div>
+                </div>
+            </div>
+            <div class="history">
+                <div class="title-history">
+                    <h1>Quizzes History</h1>
+                    <a href="">View all</a>
+                </div>
+                <div class="history-detail">
+                    <a href="" class="button-link">
+                        <div class="history-detail-row">
+                            <div class="history-detail-col">
+                                <div class="title-detail">
+                                    <h1 class="title-black">Literacy Quiz</h1>
+                                    <h1 class="title-red">#1</h1>
+                                </div>
+                                <p class="history-subject">Social Literacy</p>
+                            </div>
+                            <h1 class="history-nilai">92</h1>
+                        </div>
+                    </a>
+                    <a href="" class="button-link">
+                        <div class="history-detail-row">
+                            <div class="history-detail-col">
+                                <div class="title-detail">
+                                    <h1 class="title-black">Literacy Quiz</h1>
+                                    <h1 class="title-red">#1</h1>
+                                </div>
+                                <p class="history-subject">Social Literacy</p>
+                            </div>
+                            <h1 class="history-nilai">92</h1>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
                 <p>Don't have an account?</p>
             </div>
             <div class="red-text">
-                <p>Sign up first</p>
+                <a href=""><p>Sign up first</p></a>
             </div>
         </div>
       </nav>
