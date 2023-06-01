@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+  margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+.logo img {
+    width: 222px;
+    height: 51px;
+  }
+
+  .buttons button {
+    margin-left: 1rem;
+  }
+
+  .regis{
+    width: 90px;
+    height: 35px;
+    background-color: #404040;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
+
+  .login{
+    width: 90px;
+    height: 35px;
+    background-color: #C93B25;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+  }
+
+  .row{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .from-pas{
+    display: flex;
+    /* justify-content: center; */
+    /* margin-left: 10%; */
+    margin-top: 0px;
+  }
+
+  .col-left{
+    width: 50%;
+    /* text-align: center; */
+    margin-left: 12%;
+  }
+
+  .col-right{
+    width: 50%;
+    margin-right: 50px;
+  }
+
+.regis:hover{
+    cursor: pointer;
+}
+
+.login:hover{
+    cursor: pointer;
+}
+
+.img-register{
+    width: 550px;
+}
+
+.headingSign{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    color: #C93B25;
+    margin: 0px 0px 40px 0px;
+}
+
+.spaceInput{
+    padding-bottom: 40px;
+}
+
+.lbl{
+    display:block;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.lengthBox{
+    width: 550px;
+    height: 40px;
+    padding: 1px 10px 1px 15px;
+    font-size: 1rem;
+    background: #F8F9FA;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.sectionPass{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.form{
+    margin-right: 120px;
+}
+
+.lblPassword{
+    display:block;
+}
+
+.lblChangePassword{
+    color:#C93B25;
+}
+
+.sbtRegis{
+    width: 220px;
+    height: 45px;
+    background-color: #C93B25;
+    border-radius: 100px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    margin-top: 30px;
+}
+
+.sbtRegis:hover{
+    cursor: pointer;
+}
