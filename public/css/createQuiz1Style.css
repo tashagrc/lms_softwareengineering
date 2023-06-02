@@ -1,0 +1,106 @@
+.content-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.steps{
+    display: flex;
+    margin-top: 15px;
+}
+
+.spacing{
+    margin-right: 25px;
+}
+
+.step-layout{
+    display: flex;
+    align-items: center;
+}
+
+.step-layout-button{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #404040;
+    opacity: 50%;
+}
+
+.step-layout-button-diff{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #404040;
+}
+
+#arrow{
+    opacity: 50%;
+}
+
+
+#first-step{
+    color: #404040;
+}
+
+#number1{
+    color: white;
+    background-color: #C93B25;
+    border-radius: 100%;
+    padding: 0.5px 10px;
+}
+
+#number2{
+    border: 1px solid #404040;
+    border-radius: 100%;
+    padding: 0.5px 8px;
+}
+
+#number3{
+    border: 1px solid #404040;
+    border-radius: 100%;
+    padding: 0.5px 8px;
+}
+
+#number4{
+    border: 1px solid #404040;
+    border-radius: 100%;
+    padding: 0.5px 8px;
+}
+
+#number5{
+    border: 1px solid #404040;
+    border-radius: 100%;
+    padding: 0.5px 8px;
+}
+
+#number6{
+    border: 1px solid #404040;
+    border-radius: 100%;
+    padding: 0.5px 8px;
+}
+
+.action-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.savecontinue{
+    background-color: #C93B25;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.content{
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+}
+
+.content-title{
+    color: #404040;
+    font-size: 30px;
+}

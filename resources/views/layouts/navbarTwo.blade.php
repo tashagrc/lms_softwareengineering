@@ -49,20 +49,23 @@
                 </a>
             </div>
         </div>
-        <div class="right-bar">
-            <div class="title">
-                <h1>Nama Page</h1>
+        <div class="right-side">
+            <div class="right-bar">
+                <div class="title">
+                    <h1>Nama Page</h1>
+                </div>
+                <div class="detail-row">
+                    <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
+                    <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
+                    <img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp">
+                </div>
             </div>
-            <div class="detail-row">
-                <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
-                <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
-                <img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp">
+            <div class="container">
+                @yield('container')
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        @yield('container')
+        
+    
     </div>
 
 </body>

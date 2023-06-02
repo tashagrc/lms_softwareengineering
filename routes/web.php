@@ -33,3 +33,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'create']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 
+Route::get('/createQuiz1', function () {
+    return view('createQuiz1');
+});
