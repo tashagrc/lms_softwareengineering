@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\QuizController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,18 +19,24 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
-Route::get('/register', function () {
-    return view('register');
-});
+// Route::get('/register', function () {
+//     return view('register');
+// });
 
-Route::get('/navbarOne', function () {
-    return view('navbarOne');
-});
+Route::get('/register', [RegisterController::class, 'create']);
+Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/navbarTwo', function () {
-    return view('navbarTwo');
+Route::get('/login', [LoginController::class, 'create']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+<<<<<<< master
+Route::get('/quiz', [QuizController::class, 'show']);
+=======
+Route::get('/createQuiz1', function () {
+    return view('createQuiz1');
 });
+>>>>>>> master

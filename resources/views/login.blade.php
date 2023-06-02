@@ -1,3 +1,5 @@
+@extends('layouts.navbarOne')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,61 +12,60 @@
 </head>
 <body>
 
-<nav>
-  <div class="logo">
-    <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
-  </div>
-  <div class="buttons">
-    <button class="regis">Register</button>
-    <button class="login">Login ></button>
-  </div>
-</nav>
-
+@section('container')
 <div class="container">
-  <div class="row">
-    <div class="col-left">
-      <img src="img/loginImg.png" class ="img-login">
-    </div>
-    <div class="col-right">
-        <div class="form">
-            <p class ="headingLogin"> Login </p>
-            <div class="form-login">
-                <div class="spaceInput">
-                    <label class ="lblEmail"> Email address </label>
-                    <input type="text" id="name" name ="name" class = "lengthBox" autocomplete="off">
-                </div>
-                <div class="spaceInput">
-                    <div class="sectionPass">
-                        <label class="lblPassword"> Password </label>
-                        <label class="lblChangePassword"> Forgot Password? </label>
+    <div class="row">
+        <div class="col-left">
+            <img src="img/loginImg.png" class ="img-login">
+        </div>
+        <div class="col-right">
+            <form action="/login" method="post">
+                @csrf
+                <div class="form">
+                    <p class ="headingLogin"> Login </p>
+                    @if(session()->has('loginError'))
+                        <div class = "flash mt-3 flash-warn">
+                            Login failed!
+                        </div>
+                    @endif
+                    <div class="form-login">
+                        <div class="spaceInput">
+                            <label class ="lblEmail"> Email address </label>
+                            <input type="email" id="UserEmail" name ="UserEmail" class = "lengthBox" autocomplete="off" autofocus required value="{{ old('UserEmail') }}">
+                            @error('UserEmail')
+                                <p id="valEmail">{{ $message }}</p>
+                            @enderror
+
+                        </div>
+                        <div class="spaceInput">
+                            <div class="sectionPass">
+                                <label class="lblPassword"> Password </label>
+                                <label class="lblChangePassword"> Forgot Password? </label>
+                            </div>
+                            <input type="password" id="UserPassword" name ="UserPassword" class = "lengthBox" autocomplete="off" required>
+                            @error('UserEmail')
+                                <p class="error-message">{{ $message }}</p>
+                            @enderror
+
+                            @error('UserPassword')
+                                <p class="error-message">{{ $message }}</p>
+                            @enderror
+
+                            @error('login_failed')
+                                <p class="error-message">{{ $message }}</p>
+                            @enderror
+                        </div>
                     </div>
-                    <input type="password" id="name" name ="name" class = "lengthBox" autocomplete="off">
+                    <div>
+                        <a> <button class="sbtLogin"> Login </button> </a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <a> <button class="sbtLogin"> Login </button> </a>
-            </div>
+            </form>
         </div>
     </div>
-
-
-
-      {{-- <div class="img-chat1">
-        <p>The LMS literature app revolutionized my approach to literature, offering a comprehensive collection of texts and interactive features that deepened my knowledge and fostered my love for reading</p>
-        <img src="{{ asset('img/chatimg1.png') }}" alt="description of myimage">
-      </div>
-      <div class="img-chat2">
-        <img src="{{ asset('img/chatimg2.png') }}" alt="description of myimage">
-        <p>Literacy with games just makes it more fun to comprehend and engaging for further reading. I am overall eager to read more beyond lessons!</p>
-      </div> --}}
-    </div>
-  </div>
 </div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
+<script src="js/login.js"></script>
 </body>
 </html>
+@endsection
+

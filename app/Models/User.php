@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Carbon;
 
 class User extends Authenticatable
 {
@@ -19,11 +20,18 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'UserName',
+        'UserEmail',
+        'UserPassword',
     ];
 
+
+
+    protected $attributes = [
+        'UserDateJoined' => '2022-08-09',
+        'UserRole' => 'Student',
+        'ClassroomID' => 1
+    ];
     /**
      * The attributes that should be hidden for serialization.
      *

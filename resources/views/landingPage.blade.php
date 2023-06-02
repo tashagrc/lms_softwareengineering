@@ -9,14 +9,14 @@
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-  
+
 <nav>
   <div class="logo">
-    <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
+    <a href="/"> <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage"> </a>
   </div>
   <div class="buttons">
-    <button class="regis">Register</button>
-    <button class="login">Login ></button>
+    <button class="regis"> <a href="/register">  Register </a> </button>
+    <button class="login"> <a href="/login"> Login > </a> </button>
   </div>
 </nav>
 
@@ -28,7 +28,7 @@
         <h1>from</h1>
         <h1 class="warna-pas">PASSION</h1>
       </div>
-      <button class="read-now">Read now</button>
+      <button class="read-now"> <a href="/login"> Read now</a></button>
     </div>
     <div class="col-right">
       <div class="img-chat1">
