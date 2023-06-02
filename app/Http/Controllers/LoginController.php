@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -23,23 +24,31 @@ class LoginController extends Controller
     //         return redirect()->intended('/dashboard');
     //     }
 
-    //     // return back()->with('loginError', 'Login failed!');
+    //     return back()->with('loginError', 'Login failed!');
     // }
 
     public function authenticate(Request $request)
     {
         $user = User::where('UserEmail', $request->input('UserEmail'))->where('UserPassword', $request->input('UserPassword'))->first();
-
-        // dd($user);
         if ($user) {
             // Authentication successful
+            Auth::loginUsingId($user->UserID);
             $request->session()->regenerate();
-            return redirect('/dashboard');
+            if(Auth::check()){
+                return redirect()->intended('/dashboard');
+            }
         } else {
             // Authentication failed
             return redirect()->back()->withErrors([
                 'login_failed' => 'Invalid email or password.',
             ]);
         }
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect('/');
     }
 }
