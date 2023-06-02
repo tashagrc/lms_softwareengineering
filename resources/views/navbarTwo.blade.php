@@ -61,5 +61,9 @@
         </div>
     </div>
 
+    <div class="container">
+        @yield('container')
+    </div>
+
 </body>
 </html>

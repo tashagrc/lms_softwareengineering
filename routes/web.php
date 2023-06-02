@@ -40,3 +40,7 @@ Route::get('/navbarThree', function () {
 Route::get('/navbarFour', function () {
     return view('navbarFour');
 });
+
+Route::get('/createQuiz', function () {
+    return view('createQuiz');
+});
