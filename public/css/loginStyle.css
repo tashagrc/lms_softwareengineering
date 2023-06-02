@@ -4,6 +4,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
   margin: 0px;
 }
@@ -161,8 +165,32 @@ nav {
     cursor: pointer;
 }
 
-#warnEmail{
-    display: none;
+#valEmail{
+    /* display: none; */
     color: red;
     margin-bottom: 10px;
+}
+
+#valPass{
+    /* display: none; */
+    color: red;
+    margin-bottom: 10px;
+}
+
+.flash {
+    /* Shared styles for all flash classes */
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.mt-3 {
+    /* Margin top of 3 units */
+    margin-bottom: 20px;
+}
+
+.flash-warn {
+    /* Styles specific to flash-warn class */
+    background-color: #F3D8DA; /* Yellow */
+    color: #692326;
 }
