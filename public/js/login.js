@@ -1,9 +1,9 @@
 let x = 0, y = 0
 
-const tagEmail = document.querySelector("#email");
+const tagEmail = document.querySelector("#UserEmail");
 
 function emailVal(emVal){
-    var emVal = document.getElementById("email").value;
+    var emVal = document.getElementById("UserEmail").value;
     // regular expression
     var validate = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.(com)$/
     if(validate.test(emVal)){
@@ -23,10 +23,10 @@ tagEmail.addEventListener("input", ()=>{
 }
 )
 
-const tagPassword = document.querySelector("#password");
+const tagPassword = document.querySelector("#UserPassword");
 
 function passVal(){
-    var passVal = document.getElementById("password").value;
+    var passVal = document.getElementById("UserPassword").value;
     var validate = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])[A-Za-z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,}$/;
     if(validate.test(passVal)){
         return true

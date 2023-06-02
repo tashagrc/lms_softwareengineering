@@ -163,19 +163,19 @@ nav {
 }
 
 #valName{
-    display: none;
+    /* display: none; */
     color: red;
     margin-bottom: 0px;
 }
 
 #valEmail{
-    display: none;
+    /* display: none; */
     color: red;
     margin-bottom: 0px;
 }
 
 #valPass{
-    display: none;
+    /* display: none; */
     color: red;
     margin-bottom: 0px;
 }

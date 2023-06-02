@@ -2,7 +2,7 @@ let x = 0, y = 0, a = 0, b = 0
 
 const specialChar = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~0-9]/;
 
-const tagName = document.querySelector("#name");
+const tagName = document.querySelector("#UserName");
 
 tagName.addEventListener("input", ()=>{
     const name = tagName.value;
@@ -16,10 +16,10 @@ tagName.addEventListener("input", ()=>{
 }
 )
 
-const tagEmail = document.querySelector("#email");
+const tagEmail = document.querySelector("#UserEmail");
 
 function emailVal(emVal){
-    var emVal = document.getElementById("email").value;
+    var emVal = document.getElementById("UserEmail").value;
     // regular expression
     var validate = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.(com)$/
     if(validate.test(emVal)){
@@ -39,10 +39,10 @@ tagEmail.addEventListener("input", ()=>{
 }
 )
 
-const tagPassword = document.querySelector("#password");
+const tagPassword = document.querySelector("#UserPassword");
 
 function passVal(){
-    var passVal = document.getElementById("password").value;
+    var passVal = document.getElementById("UserPassword").value;
     var validate = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])[A-Za-z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,}$/;
     if(validate.test(passVal)){
         return true
@@ -60,11 +60,11 @@ tagPassword.addEventListener("input", ()=>{
     }
 })
 
-const tagCPassword = document.querySelector("#cpass");
+const tagCPassword = document.querySelector("#UserCPass");
 
 function confPassVal(){
-    var pass = document.getElementById("password").value;
-    var confpass = document.getElementById("cpass").value;
+    var pass = document.getElementById("UserPassword").value;
+    var confpass = document.getElementById("UserCPass").value;
     if(pass === confpass){
         return true
     }

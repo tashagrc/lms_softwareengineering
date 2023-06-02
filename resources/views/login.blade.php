@@ -1,4 +1,4 @@
-@extends('layouts.navbarRegister')
+@extends('layouts.navbarOne')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,36 +15,49 @@
 @section('container')
 <div class="container">
     <div class="row">
-      <div class="col-left">
-        <img src="img/loginImg.png" class ="img-login">
-      </div>
-      <div class="col-right">
-          <div class="form">
-              <p class ="headingLogin"> Login </p>
-              <div class="form-login">
-                  <div class="spaceInput">
-                      <label class ="lblEmail"> Email address </label>
-                      <input type="email" id="email" name ="email" class = "lengthBox" autocomplete="off">
-                      <p id="valEmail">*Invalid Email</p>
-                  </div>
-                  <div class="spaceInput">
-                      <div class="sectionPass">
-                          <label class="lblPassword"> Password </label>
-                          <label class="lblChangePassword"> Forgot Password? </label>
-                      </div>
-                      <input type="password" id="password" name ="password" class = "lengthBox" autocomplete="off">
-                      <p id="valPass">*Invalid Password</p>
-                  </div>
-              </div>
-              <div>
-                  <a> <button class="sbtLogin"> Login </button> </a>
-              </div>
-          </div>
-      </div>
+        <div class="col-left">
+            <img src="img/loginImg.png" class ="img-login">
+        </div>
+        <div class="col-right">
+            <form action="/login" method="post">
+                @csrf
+                <div class="form">
+                    <p class ="headingLogin"> Login </p>
+                    @if(session()->has('loginError'))
+                        <div class = "flash mt-3 flash-warn">
+                            Login failed!
+                        </div>
+                    @endif
+                    <div class="form-login">
+                        <div class="spaceInput">
+                            <label class ="lblEmail"> Email address </label>
+                            <input type="email" id="UserEmail" name ="UserEmail" class = "lengthBox" autocomplete="off" autofocus required value="{{ old('UserEmail') }}">
+                            @error('UserEmail')
+                                <p id="valEmail">{{ $message }}</p>
+                            @enderror
+
+                        </div>
+                        <div class="spaceInput">
+                            <div class="sectionPass">
+                                <label class="lblPassword"> Password </label>
+                                <label class="lblChangePassword"> Forgot Password? </label>
+                            </div>
+                            <input type="password" id="UserPassword" name ="UserPassword" class = "lengthBox" autocomplete="off" required>
+                            @error('UserPassword')
+                                <p id="valPass">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div>
+                        <a> <button class="sbtLogin"> Login </button> </a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-  </div>
-      <script src="js/login.js"></script>
-  </body>
-  </html>
+</div>
+<script src="js/login.js"></script>
+</body>
+</html>
 @endsection
 

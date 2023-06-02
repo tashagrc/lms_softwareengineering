@@ -17,7 +17,7 @@
                 <p>Already have an account?</p>
             </div>
             <div class="red-text">
-                <a href="/register"><p>Login here</p></a>
+                <a href="/login"><p>Login here</p></a>
             </div>
         </div>
       </nav>
