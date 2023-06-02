@@ -37,6 +37,3 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
 
-Route::get('/createQuiz1', function () {
-    return view('createQuiz1');
-});
