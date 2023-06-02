@@ -43,8 +43,16 @@
                                 <label class="lblChangePassword"> Forgot Password? </label>
                             </div>
                             <input type="password" id="UserPassword" name ="UserPassword" class = "lengthBox" autocomplete="off" required>
+                            @error('UserEmail')
+                                <p class="error-message">{{ $message }}</p>
+                            @enderror
+
                             @error('UserPassword')
-                                <p id="valPass">{{ $message }}</p>
+                                <p class="error-message">{{ $message }}</p>
+                            @enderror
+
+                            @error('login_failed')
+                                <p class="error-message">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>

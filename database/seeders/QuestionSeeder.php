@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class QuestionSeeder extends Seeder
 {
@@ -13,6 +14,24 @@ class QuestionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('questions')->insert([
+            [
+                'QuestionID' => 1,
+                'QuestionTitle' => 'Question 1',
+                'QuestionContent' => 'Content of Question 1',
+                'QuizID' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'QuestionID' => 2,
+                'QuestionTitle' => 'Question 2',
+                'QuestionContent' => 'Content of Question 2',
+                'QuizID' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            // Add more question records as needed
+        ]);
     }
 }
