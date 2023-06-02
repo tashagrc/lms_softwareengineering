@@ -1,4 +1,4 @@
-@extends('layouts.navbarOne')
+@extends('layouts.navbarRegister')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,34 +19,53 @@
       <img src="img/regisImg.png" class ="img-register">
     </div>
     <div class="col-right">
-        <div class="form">
-            <p class ="headingSign"> Sign Up </p>
-            <div class="form-login">
-                <div class="spaceInput">
-                    <label class ="lbl"> Name </label>
-                    <input type="text" id="name" name ="name" class = "lengthBox" autocomplete="off">
-                    <p id="valName">*Name can't contain special characters </p>
+        <form action="/register" method="post">
+            @csrf
+            <div class="form">
+                <p class ="headingSign"> Sign Up </p>
+                <div class="form-login">
+                    <div class="spaceInput">
+                        <label class ="lbl"> Name </label>
+                        {{-- Version 1 --}}
+                        {{-- <input type="text" id="UserName" name ="UserName" class = "lengthBox" autocomplete="off"> --}}
+                        {{-- <p id="valName">*Name can't contain special characters </p> --}}
+
+                        {{-- Version 2 --}}
+                        <input type="text" id="UserName" name ="UserName" class = "lengthBox" autocomplete="off" required value="{{ old('UserName') }}">
+                        @error('UserName')
+                            <p id="valName"> {{ $message }} </p>
+                        @enderror
+                    </div>
+                    <div class="spaceInput">
+                        <label class ="lbl"> Email address </label>
+                        {{-- <input type="text" id="UserEmail" name ="UserEmail" class = "lengthBox" autocomplete="off">
+                        <p id="valEmail">*Email must contain @ and ends with .com </p> --}}
+
+                        <input type="text" id="UserEmail" name ="UserEmail" class = "lengthBox" autocomplete="off" required value="{{ old('UserEmail') }}">
+                        @error('UserEmail')
+                            <p id="valEmail"> {{ $message }} </p>
+                        @enderror
+                    </div>
+                    <div class="spaceInput">
+                        <label class ="lbl"> Password </label>
+                        {{-- <input type="password" id="UserPassword" name ="UserPassword" class = "lengthBox" autocomplete="off">
+                        <p id="valPass">*Password must contain at least one uppercase letter, one lowercase letter, one number and one special character</p> --}}
+                        <input type="password" id="UserPassword" name ="UserPassword" class = "lengthBox" autocomplete="off" required>
+                        @error('UserPassword')
+                            <p id="valPass"> {{ $message }} </p>
+                        @enderror
+                    </div>
+                    <div class="spaceInput">
+                        <label class ="lbl"> Confirm Password </label>
+                        <input type="password" id="UserCPass" name ="UserCPass" class = "lengthBox" autocomplete="off" required>
+                        <p id="valCPass">*The confirmed password does not match the entered password. </p>
+                    </div>
                 </div>
-                <div class="spaceInput">
-                    <label class ="lbl"> Email address </label>
-                    <input type="text" id="email" name ="email" class = "lengthBox" autocomplete="off">
-                    <p id="valEmail">*Email must contain @ and ends with .com </p>
-                </div>
-                <div class="spaceInput">
-                    <label class ="lbl"> Password </label>
-                    <input type="password" id="password" name ="password" class = "lengthBox" autocomplete="off">
-                    <p id="valPass">*Password must contain at least one uppercase letter, one lowercase letter, one number and one special character</p>
-                </div>
-                <div class="spaceInput">
-                    <label class ="lbl"> Confirm Password </label>
-                    <input type="password" id="cpass" name ="cpass" class = "lengthBox" autocomplete="off">
-                    <p id="valCPass">*The confirmed password does not match the entered password. </p>
+                <div>
+                    <a> <button class="sbtRegis"> Sign Up </button> </a>
                 </div>
             </div>
-            <div>
-                <a> <button class="sbtRegis"> Sign Up </button> </a>
-            </div>
-        </div>
+        </form>
     </div>
     <script src="js/register.js"></script>
 </body>
