@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    
+
     <div class="nav-row">
         <div class="left-bar">
             <div class="logo">
@@ -28,7 +28,7 @@
                             <img src="{{ asset('img/course.png') }}" alt="description of myimage">
                             <p>Courses</p>
                         </div>
-                    </a> 
+                    </a>
                     <a href="" class="button-link">
                         <div class="quiz">
                             <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">
@@ -54,7 +54,14 @@
             <div class="title">
                 <h1>Nama Page</h1>
             </div>
+            <br/>
+            <div class="container">
+                @yield('container')
+            </div>
         </div>
+
+
+
         <div class="right-bar">
             <div class="detail-row">
                 <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
@@ -109,6 +116,7 @@
                     </a>
                 </div>
             </div>
+
         </div>
     </div>
 

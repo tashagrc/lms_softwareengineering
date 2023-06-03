@@ -15,4 +15,10 @@ class QuizController extends Controller
     function createQuiz() {
         return view('createQuiz1');
     }
+
+    function quizDetails($QuizID) {
+        $quiz = Quiz::find($QuizID);
+
+        return view('quizDetails', compact('quiz'));
+    }
 }

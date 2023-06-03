@@ -9,6 +9,7 @@ class Answer extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'AnswerID';
     public function users() {
         return $this->belongsTo(Answer::class);
     }
