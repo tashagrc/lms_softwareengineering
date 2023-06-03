@@ -58,7 +58,16 @@
         </div>
         <div class="content">
             <h1 class="content-title">Select class</h1>
-            
+            <div class="content">
+                <div class="dropdown">
+                    <button class="dropdown-button">Select</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="action-button">
             <a href=""><button class="savecontinue">Save & Continue</button></a>

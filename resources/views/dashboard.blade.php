@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-</head>
-<body>
+@extends('layouts.navbarRegister')
+@section('container')
 
-</body>
-</html>
+    @guest
+        <h1>
+            Hello
+        </h1>
+    @endguest
+
+    @auth
+        <h2>
+            <form action="/logout" method="post">
+                @csrf
+                <button>
+                    Logout
+                </button>
+            </form>
+
+        </h2>
+    @endauth
+@endsection

@@ -19,13 +19,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = 'users';
+    protected $primaryKey = 'UserID';
+
     protected $fillable = [
         'UserName',
         'UserEmail',
         'UserPassword',
     ];
-
-
 
     protected $attributes = [
         'UserDateJoined' => '2022-08-09',
