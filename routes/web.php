@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\QuizController;
 /*
@@ -41,3 +42,7 @@ Route::get('/quiz', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 
 Route::get('quiz/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
+
+Route::get('answer/{QuizID}', [QuestionController::class, 'showQuestion']);
+Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers'])->name('save.answers');
+

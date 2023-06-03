@@ -10,6 +10,7 @@ class Answer extends Model
     use HasFactory;
 
     protected $primaryKey = 'AnswerID';
+    protected $fillable = ['AnswerContent', 'QuizID', 'UserID'];
     public function users() {
         return $this->belongsTo(Answer::class);
     }

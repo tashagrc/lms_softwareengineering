@@ -17,9 +17,7 @@ class AnswerSeeder extends Seeder
         DB::table('answers')->insert([
             [
                 'AnswerID' => 1,
-                'AnswerMainTopic' => 'Main Topic of Answer 1',
-                'AnswerPurpose' => 'Purpose of Answer 1',
-                'AnswerConclusion' => 'Conclusion of Answer 1',
+                'AnswerContent' => 'ini jawaban 1',
                 'QuizID' => 1,
                 'UserID' => 1,
                 'created_at' => now(),
@@ -27,9 +25,7 @@ class AnswerSeeder extends Seeder
             ],
             [
                 'AnswerID' => 2,
-                'AnswerMainTopic' => 'Main Topic of Answer 2',
-                'AnswerPurpose' => 'Purpose of Answer 2',
-                'AnswerConclusion' => 'Conclusion of Answer 2',
+                'AnswerContent' => 'ini jawaban 1',
                 'QuizID' => 1,
                 'UserID' => 2,
                 'created_at' => now(),

@@ -26,7 +26,7 @@
     </div>
 
     <div>
-        <a href="#" class="link">Play</a>
+        <a href="{{url('answer', $quiz['QuizID'])}}" class="link">Play</a>
     </div>
 </body>
 </html>
