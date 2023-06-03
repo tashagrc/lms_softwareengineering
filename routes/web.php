@@ -40,4 +40,4 @@ Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('au
 Route::get('/quiz', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 
-Route::get('/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
+Route::get('quiz/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
