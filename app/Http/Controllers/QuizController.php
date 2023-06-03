@@ -11,4 +11,8 @@ class QuizController extends Controller
         $data = Quiz::all();
         return view('quizList', ['quizzes' => $data]);
     }
+
+    function createQuiz() {
+        return view('createQuiz1');
+    }
 }

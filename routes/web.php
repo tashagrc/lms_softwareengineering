@@ -39,6 +39,4 @@ Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('au
 
 Route::get('/quiz', [QuizController::class, 'show']);
 
-Route::get('/createQuiz1', function () {
-    return view('createQuiz1');
-});
+Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
