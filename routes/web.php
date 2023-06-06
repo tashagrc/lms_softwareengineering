@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\QuizController;
 /*
@@ -27,16 +29,20 @@ Route::get('/', function () {
 //     return view('register');
 // });
 
-Route::get('/register', [RegisterController::class, 'create']);
+Route::get('/register', [RegisterController::class, 'create'])->middleware(('guest'));
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/login', [LoginController::class, 'create']);
+Route::get('/login', [LoginController::class, 'create'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-<<<<<<< master
+Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
+
 Route::get('/quiz', [QuizController::class, 'show']);
-=======
-Route::get('/createQuiz1', function () {
-    return view('createQuiz1');
-});
->>>>>>> master
+Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
+
+Route::get('quiz/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
+
+Route::get('answer/{QuizID}', [QuestionController::class, 'showQuestion']);
+Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers'])->name('save.answers');
+
