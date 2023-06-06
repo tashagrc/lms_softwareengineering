@@ -63,15 +63,15 @@
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
-                        @foreach ($classes as $class)
-                            <a href="" data-value="{{ $class['ClassroomName'] }}">{{ $class["ClassroomName"] }}</a>
+                        @foreach ($classCourse as $class)
+                            <a href="{{ route('createQuiz2', ['clickedValue' => $class->dataValue]) }}" class="{{ $class->dataValue == $clickedValue ? 'active' : '' }}">{{ $class->name }}</a>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
         <div class="action-button">
-            <button class="savecontinue"><a href="/createQuiz2">Save & Continue</a></button>
+            <button class="savecontinue">Save & Continue</button>
         </div>
     </div>
     <script src="js/tes.js"></script>

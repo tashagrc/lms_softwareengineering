@@ -15,4 +15,5 @@ class Classroom extends Model
     public function quizzes() {
         return $this->hasMany(Quiz::class);
     }
+
 }
