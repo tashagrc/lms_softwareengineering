@@ -20,5 +20,6 @@ class Quiz extends Model
         return $this->hasMany(Answer::class);
     }
 
+    protected $primaryKey = 'QuizID';
 
 }

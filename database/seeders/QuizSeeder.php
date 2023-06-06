@@ -18,6 +18,7 @@ class QuizSeeder extends Seeder
             [
                 'QuizID' => 1,
                 'QuizTitle' => 'Quiz 1',
+                'QuizArticle' => 'Article 1',
                 'QuizDate' => '2023-06-01',
                 'QuizStart' => '2023-06-01',
                 'QuizEnd' => '2023-06-01',
@@ -31,6 +32,7 @@ class QuizSeeder extends Seeder
             [
                 'QuizID' => 2,
                 'QuizTitle' => 'Quiz 2',
+                'QuizArticle' => 'Article 1',
                 'QuizDate' => '2023-06-02',
                 'QuizStart' => '2023-06-02',
                 'QuizEnd' => '2023-06-02',

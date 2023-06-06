@@ -15,7 +15,7 @@ class CreateSessionsTable extends Migration
     {
         Schema::create('sessions', function (Blueprint $table) {
             $table->id('SessionID');
-            $table->integer('SessionNumber');
+            $table->string('SessionTopic', 255);
             $table->string('SessionIntroduction', 255);
             $table->unsignedBigInteger('CourseID');
             $table->foreign('CourseID')->references('CourseID')->on('courses');
