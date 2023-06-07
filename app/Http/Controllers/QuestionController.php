@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Answer;
 use App\Models\Question;
 use App\Models\Quiz;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller
 {
@@ -36,6 +38,15 @@ class QuestionController extends Controller
                 'UserID' => 1 // TODO
             ]);
         }
+    }
+
+    static function updateXP($QuizID) {
+        $count = QuestionController::countQuestion($QuizID);
+        $xp = $count * 50;
+        $user = User::find(1);
+        $quiz = Quiz::find($QuizID);
+        User::where('UserID', 1)->update(['UserXP' => DB::raw('UserXP + ' . $xp)]);
+        return view('quizStudentSuccess', compact('xp', 'user', 'quiz'));
     }
 
     // Redirect or return a response as needed

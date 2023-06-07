@@ -31,4 +31,6 @@ class QuizController extends Controller
         $totalQuestion = QuestionController::countQuestion($QuizID);
         return view('quizDetails', compact('quiz', 'totalQuestion'));
     }
+
+
 }
