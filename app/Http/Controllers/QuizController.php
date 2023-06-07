@@ -17,12 +17,9 @@ class QuizController extends Controller
                     // ->where('user_quizzes.UserID', '=', Auth::user()->UserID);
             })
             ->get([
-                'quizzes.QuizTitle',
+                'quizzes.*',
                 'classrooms.ClassroomName',
                 'courses.CourseName',
-                'quizzes.QuizDate',
-                'quizzes.QuizStart',
-                'quizzes.QuizEnd',
                 'user_quizzes.QuizScore',
                 'user_quizzes.StatusPlayed'
             ]);

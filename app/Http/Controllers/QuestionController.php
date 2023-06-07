@@ -38,6 +38,7 @@ class QuestionController extends Controller
                 'UserID' => 1 // TODO
             ]);
         }
+        return redirect()->route('success.xp', ['QuizID' => $QuizID]);
     }
 
     static function updateXP($QuizID) {

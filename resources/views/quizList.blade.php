@@ -37,7 +37,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Quiz End {{$q['QuizEnd']}} </h6>
             <h6 class="card-subtitle mb-2 text-muted">Quiz Score {{$q['QuizScore']}} </h6>
             <h6 class="card-subtitle mb-2 text-muted">Status Played{{$q['StatusPlayed']}} </h6>
-            <a href="{{url('quiz/quizDetails', $q->QuizID)}}" class="card-link">Play</a>
+            <a href="{{url('quizList/quizDetails', $q->QuizID)}}" class="card-link">Play</a>
         </div>
     </div>
     @endforeach
