@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\CreateQuiz1Controller;
+use App\Http\Controllers\CreateQuiz2Controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +42,20 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
 
-Route::get('/createQuiz1', function () {
-    return view('createQuiz1');
+Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
+Route::get('createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index'])->name('createQuiz2');
+
+Route::get('/navbarFour', function () {
+    return view('layouts/navbarFour');
 });
+Route::get('/quizList', [QuizController::class, 'show']);
+Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
+
+Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
+
+Route::get('/answer/{QuizID}', [QuestionController::class, 'showQuestion']);
+Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers'])->name('save.answers');
+
+Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
+
+Route::get('/achievement', [AchievementController::class, 'show']);

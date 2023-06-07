@@ -10,9 +10,9 @@ body{
 
 .nav-row {
     display: flex;
+    flex-direction:column;
     width: 100%;
     min-height: 100vh;
-
   }
 
 .logo img {
@@ -21,13 +21,16 @@ body{
   }
 
 .left-bar{
+    width: 20%;
     display: flex;
+    position:fixed;
+    height:100%;
+    left:0;
     flex-direction: column;
-    width: 15%;
-    padding-top: 35px;
-    padding-left: 65px;
+    justify-content: space-around;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
     padding-right: 30px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .pages-bar{
@@ -103,13 +106,15 @@ body{
 .middle-bar{
     display: flex;
     justify-content: space-between;
+    width:50%;
+    position:absolute;
     align-items: center;
-    width: 60%;
     height: 12vh;
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 24%;
     padding-top: 5px;
     border-bottom: 1px solid #d9d9d9;
+
 }
 
 .detail-row{
@@ -126,12 +131,20 @@ body{
     font-weight: 700;
 }
 
+.title h3{
+    text-align:start;
+}
+
 .right-bar{
     width: 18%;
     display: flex;
+    position:fixed;
+    height:100%;
+    right:0;
     flex-direction: column;
     justify-content: space-around;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-left:400px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -225,7 +238,7 @@ body{
 .title-progress p{
     font-size: 12px;
     margin-right: 5px;
-    
+
 }
 
 .title-progress h5{
