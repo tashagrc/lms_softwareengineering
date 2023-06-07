@@ -50,9 +50,9 @@
                 </a>
             </div>
         </div>
-        <div class="middle-bar">
-            <div class="title">
-                <h1>Nama Page</h1>
+        <div class="middle-bar" style="display: flex; flex-direction:column">
+            <div class="title" style="padding-top:20px">
+                <h3>Dashboard</h3>
             </div>
             <br/>
             <div class="container">
