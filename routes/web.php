@@ -6,6 +6,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\CreateQuiz1Controller;
+use App\Http\Controllers\CreateQuiz2Controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +41,12 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
 
+Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
+Route::get('createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index'])->name('createQuiz2');
+
+Route::get('/navbarFour', function () {
+    return view('layouts/navbarFour');
+});
 Route::get('/quiz', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 
