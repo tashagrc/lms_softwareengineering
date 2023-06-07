@@ -42,7 +42,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
 
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
-Route::get('/createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index'])->name('createQuiz2');
+Route::get('createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index'])->name('createQuiz2');
 
 Route::get('/navbarFour', function () {
     return view('layouts/navbarFour');

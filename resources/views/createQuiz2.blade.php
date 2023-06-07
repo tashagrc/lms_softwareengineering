@@ -63,8 +63,8 @@
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
-                        @foreach ($classCourse as $class)
-                            <a href="{{ route('createQuiz2', ['clickedValue' => $class->dataValue]) }}" class="{{ $class->dataValue == $clickedValue ? 'active' : '' }}">{{ $class->name }}</a>
+                        @foreach ($classCourse as $course)
+                            <a href="" data-value="{{ $course['CourseName'] }}">{{ $course["CourseName"] }}</a>
                         @endforeach
                     </div>
                 </div>

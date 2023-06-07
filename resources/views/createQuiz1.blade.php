@@ -71,7 +71,8 @@
             </div>
         </div>
         <div class="action-button">
-            <button class="savecontinue"><a href="/createQuiz2">Save & Continue</a></button>
+            <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
+            </button>
         </div>
     </div>
     <script src="js/tes.js"></script>

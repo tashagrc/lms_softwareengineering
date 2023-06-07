@@ -8,17 +8,15 @@ use App\Models\Classroom;
 
 class CreateQuiz1Controller extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        // Your code to retrieve the value
-        $clickedValue = 'Your value';
-
-        // Generate the URL for the second page with the route parameter
-        $url = route('createQuiz2', ['clickedValue' => $clickedValue]);
+        // Retrieve the clicked value from the request
+        $clickedValue = $request->input('clickedValue');
 
         return view('createQuiz1', [
-            'url' => $url,
             'classes' => Classroom::all(),
+            'clickedValue' => $clickedValue,
         ]);
     }
 }
+
