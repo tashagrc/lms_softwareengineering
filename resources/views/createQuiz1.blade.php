@@ -75,7 +75,7 @@
             </button>
         </div>
     </div>
-    <script src="js/tes.js"></script>
+
 </body>
 </html>
 @endsection

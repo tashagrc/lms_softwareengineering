@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -47,11 +48,14 @@ Route::get('createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index']
 Route::get('/navbarFour', function () {
     return view('layouts/navbarFour');
 });
-Route::get('/quiz', [QuizController::class, 'show']);
+Route::get('/quizList', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 
-Route::get('quiz/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
+Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 
-Route::get('answer/{QuizID}', [QuestionController::class, 'showQuestion']);
+Route::get('/answer/{QuizID}', [QuestionController::class, 'showQuestion']);
 Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers'])->name('save.answers');
 
+Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
+
+Route::get('/achievement', [AchievementController::class, 'show']);
