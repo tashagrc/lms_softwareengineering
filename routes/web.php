@@ -56,3 +56,4 @@ Route::get('answer/{QuizID}', [QuestionController::class, 'showQuestion']);
 Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers'])->name('save.answers');
 
 Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP']);
+
