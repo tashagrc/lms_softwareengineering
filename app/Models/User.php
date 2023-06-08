@@ -60,4 +60,10 @@ class User extends Authenticatable
     public function classrooms() {
         return $this->belongsTo(Classroom::class);
     }
+
+
+    public function userQuiz()
+    {
+        return $this->hasOne(UserQuiz::class, 'UserID', 'UserID');
+    }
 }
