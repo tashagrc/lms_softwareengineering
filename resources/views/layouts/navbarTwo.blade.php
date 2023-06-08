@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{{-- <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet"> --}}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +8,6 @@
     <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
 </head>
 <body>
-
     <div class="nav-row">
         <div class="left-bar">
             <div class="logo">
@@ -53,8 +51,8 @@
         <div class="right-side">
             <div class="right-bar">
                 <div class="title">
-                    <h3>Nama Page</h3>
-                    {{-- kasi nama routing biar pas redirect itu langsung ke nama page --}}
+                    <h3>Title</h3>
+
                 </div>
                 <div class="detail-row">
                     <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
