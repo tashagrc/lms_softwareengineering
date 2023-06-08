@@ -16,11 +16,11 @@
       <th scope="col">No</th>
       <th scope="col">Student Name</th>
       <th scope="col">Status</th>
-      <th scope="col">Score</th>
+      <th scope="col">Scores</th>
       <th scope="col">Detail</th>
     </tr>
   </thead>
-  <tbody class="table-group-divider">
+  <tbody class="table-group-divider">  
         @php
             $numeral = 1;
         @endphp
