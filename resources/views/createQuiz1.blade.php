@@ -1,4 +1,4 @@
-@extends('layouts.navbarTwo')
+@extends('layouts.nav44rTwo')
 
 <!DOCTYPE html>
 <html lang="en">

@@ -15,7 +15,7 @@ a{
 
 body{
   margin: 0px;
-  overflow:hidden;
+  /* overflow:hidden; */
 }
 
 nav {

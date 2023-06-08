@@ -120,6 +120,7 @@ body{
 .detail-row{
     display: flex;
     justify-content: flex-end;
+    margin-top:10px;
 }
 
 .detail-row img{
@@ -136,7 +137,7 @@ body{
 }
 
 .right-bar{
-    width: 18%;
+    width: 22%;
     display: flex;
     position:fixed;
     height:100%;
@@ -168,11 +169,12 @@ body{
 
 .badge{
     display: flex;
-    align-items: center;
+    justify-content:center;
+    /* align-items: center; */
     background-color: #FEF7F7;
     border-radius: 15px;
-    padding: 5px 10px;
-    margin-top: 15px;
+    /* padding: 5px 10px;
+    margin-top: 15px; */
 }
 
 .badge p{
@@ -181,6 +183,7 @@ body{
 }
 
 .star{
+    margin:0;
     width: 15px;
     height: 15px;
 }
@@ -196,6 +199,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top:20px;
 }
 
 .nama{
