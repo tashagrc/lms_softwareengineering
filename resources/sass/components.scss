@@ -1,0 +1,18 @@
+// ------ SIDEBAR ------
+.sidebar {
+    width: 13rem;
+    position: fixed;
+    height: 100%;
+    background-color: white;
+    color: $gray-600;
+    overflow: scroll;
+}
+
+.sidebar-content {
+    font-size: 13px;
+    padding: 2.5rem .25rem 4.5rem .25rem;
+}
+
+.sidebar .nav .nav-link.active {
+    color: $primary;
+}

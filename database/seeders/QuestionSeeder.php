@@ -18,7 +18,6 @@ class QuestionSeeder extends Seeder
             [
                 'QuestionID' => 1,
                 'QuestionTitle' => 'Question 1',
-                'QuestionContent' => 'Content of Question 1',
                 'QuizID' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -26,7 +25,6 @@ class QuestionSeeder extends Seeder
             [
                 'QuestionID' => 2,
                 'QuestionTitle' => 'Question 2',
-                'QuestionContent' => 'Content of Question 2',
                 'QuizID' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
