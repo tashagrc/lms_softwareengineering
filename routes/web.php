@@ -60,3 +60,16 @@ Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers']
 Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
 
 Route::get('/achievement', [AchievementController::class, 'show']);
+
+Route::get('/navbarTwo', function () {
+    return view('layouts/navbarTwo');
+});
+
+Route::get('/navbarOne', function () {
+    return view('layouts/navbarOne');
+});
+
+Route::get('/navbarThree', function () {
+    return view('layouts/navbarThree');
+});
+Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
