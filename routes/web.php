@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CreateQuiz1Controller;
 use App\Http\Controllers\CreateQuiz2Controller;
 
@@ -59,3 +60,5 @@ Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers']
 Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
 
 Route::get('/achievement', [AchievementController::class, 'show']);
+
+Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
