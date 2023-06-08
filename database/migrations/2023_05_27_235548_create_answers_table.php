@@ -15,9 +15,7 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id('AnswerID');
-            $table->string('AnswerMainTopic', 255);
-            $table->string('AnswerPurpose', 255);
-            $table->string('AnswerConclusion', 255);
+            $table->string('AnswerContent', 255);
             $table->unsignedBigInteger('QuizID');
             $table->unsignedBigInteger('UserID');
             $table->foreign('QuizID')->references('QuizID')->on('quizzes');
