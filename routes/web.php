@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\GradeController;
+use App\Http\Controllers\Grade2Controller;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\CreateQuiz1Controller;
 use App\Http\Controllers\CreateQuiz2Controller;
@@ -25,13 +27,17 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
+Route::get('/login', function () {
+    return view('login');
+});
 
-// Route::get('/register', function () {
-//     return view('register');
-// });
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware(('guest'));
 Route::post('/register', [RegisterController::class, 'store']);
@@ -41,6 +47,7 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
+
 
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
 Route::get('createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index'])->name('createQuiz2');
@@ -59,3 +66,20 @@ Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers']
 Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
 
 Route::get('/achievement', [AchievementController::class, 'show']);
+
+Route::get('/grade', function () {
+    return view('viewGrade');
+});
+
+Route::get('/grade', [GradeController::class, 'index']);
+
+Route::get('/viewGradeDetail', function () {
+    return view('viewGradeDetail');
+})->name('viewGradeDetail');
+
+Route::get('/grade2', function () {
+    return view('viewGrade2');
+});
+
+Route::get('/grade2', [Grade2Controller::class, 'index']);
+
