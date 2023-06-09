@@ -58,21 +58,21 @@
             </div>
         </div>
         <div class="content">
-            <h1 class="content-title">Select class</h1>
+            <h1 class="content-title">Select subject</h1>
             <div class="content">
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
-                        @foreach ($classCourse as $course)
-                            <a href="" data-value="{{ $course['CourseName'] }}">{{ $course["CourseName"] }}</a>
+                        @foreach ($courses as $course)
+                            <a href="{{ url('createQuiz1/createQuiz2/createQuiz3', $course->CourseID) }}" class="class-name">{{ $course->CourseName }}</a>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
-        <div class="action-button">
+        {{-- <div class="action-button">
             <button class="savecontinue">Save & Continue</button>
-        </div>
+        </div> --}}
     </div>
     <script src="js/tes.js"></script>
 </body>
