@@ -70,9 +70,9 @@
                 </div>
             </div>
         </div>
-        <div class="action-button">
+        {{-- <div class="action-button">
             <button class="savecontinue">Save & Continue</button>
-        </div>
+        </div> --}}
     </div>
     <script src="js/tes.js"></script>
 </body>

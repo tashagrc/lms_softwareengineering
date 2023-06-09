@@ -10,6 +10,8 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CreateQuiz1Controller;
 use App\Http\Controllers\CreateQuiz2Controller;
+use App\Http\Controllers\CreateQuiz3Controller;
+
 
 /*
 |--------------------------------------------------------------------------

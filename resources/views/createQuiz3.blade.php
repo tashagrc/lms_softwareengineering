@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="content">
-            <h1 class="content-title">Select subject</h1>
+            <h1 class="content-title">Select topic</h1>
             <div class="content">
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
@@ -70,9 +70,9 @@
                 </div>
             </div>
         </div>
-        <div class="action-button">
+        {{-- <div class="action-button">
             <button class="savecontinue">Save & Continue</button>
-        </div>
+        </div> --}}
     </div>
     <script src="js/tes.js"></script>
 </body>
