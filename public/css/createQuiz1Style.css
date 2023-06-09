@@ -3,15 +3,15 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    margin-left:15%;
 }
 
 .steps{
     display: flex;
-    margin-top: 15px;
 }
 
 .spacing{
-    margin-right: 25px;
+    margin-right: 15px;
 }
 
 .step-layout{
@@ -99,13 +99,11 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 100px;
-    margin-right: 50px;
 }
 
 .content-title{
     color: #404040;
     font-size: 30px;
-    margin-right: 50px;
 }
 
 .dropdown{
@@ -130,13 +128,13 @@
     padding: 0px 200px 0px 0px;
     width: 100%;
 }
-  
+
   .dropdown-content a {
     font-size: 15px;
     color: #404040;
     padding: 12px 16px;
     /* margin-top: 20px; */
-    text-decoration: none;  
+    text-decoration: none;
     display: block;
     font-weight: bold;
   }

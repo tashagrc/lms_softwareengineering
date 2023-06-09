@@ -1,4 +1,4 @@
-@extends('layouts.navbarTwo')
+@extends('layouts.nav44rTwo')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +75,7 @@
             </button>
         </div>
     </div>
-    <script src="js/tes.js"></script>
+
 </body>
 </html>
 @endsection
