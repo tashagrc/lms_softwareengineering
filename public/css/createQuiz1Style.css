@@ -1,9 +1,7 @@
 .content-middle{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
-    margin-left:15%;
 }
 
 .steps{
@@ -104,6 +102,7 @@
 .content-title{
     color: #404040;
     font-size: 30px;
+    margin-top: 150px;
 }
 
 .dropdown{
@@ -118,6 +117,8 @@
     background-color: white;
     padding: 0px 200px;
     font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .dropdown-content {

@@ -17,7 +17,10 @@ class AnswerSeeder extends Seeder
         DB::table('answers')->insert([
             [
                 'AnswerID' => 1,
-                'AnswerContent' => 'ini jawaban 1',
+                'AnswerContent' => 'The American Revolution, which took place from 1775 to 1783, was a
+                monumental event in the history of the United States. Fueled by a
+                growing discontent with British colonial rule, American colonists rose
+                up to challenge the authority of the British Empire',
                 'QuizID' => 1,
                 'UserID' => 1,
                 'created_at' => now(),
@@ -25,9 +28,23 @@ class AnswerSeeder extends Seeder
             ],
             [
                 'AnswerID' => 2,
-                'AnswerContent' => 'ini jawaban 1',
+                'AnswerContent' => 'The American Revolution, which took place from 1775 to 1783, was a
+                monumental event in the history of the United States. Fueled by a
+                growing discontent with British colonial rule, American colonists rose
+                up to challenge the authority of the British Empire',
                 'QuizID' => 1,
-                'UserID' => 2,
+                'UserID' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'AnswerID' => 3,
+                'AnswerContent' => 'The American Revolution, which took place from 1775 to 1783, was a
+                monumental event in the history of the United States. Fueled by a
+                growing discontent with British colonial rule, American colonists rose
+                up to challenge the authority of the British Empire',
+                'QuizID' => 1,
+                'UserID' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

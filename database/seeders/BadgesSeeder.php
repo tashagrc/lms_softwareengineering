@@ -17,15 +17,15 @@ class BadgesSeeder extends Seeder
         DB::table('badges')->insert([
             [
                 'BadgesID' => 1,
-                'BadgesName' => 'Badge 1',
-                'BadgesDescription' => 'Description of Badge 1',
+                'BadgesName' => 'Agile Writer',
+                'BadgesDescription' => 'Wrote an article in 10 minutes',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'BadgesID' => 2,
-                'BadgesName' => 'Badge 2',
-                'BadgesDescription' => 'Description of Badge 2',
+                'BadgesName' => 'First Step Learner',
+                'BadgesDescription' => 'Read an article for the first time',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

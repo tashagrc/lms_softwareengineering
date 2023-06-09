@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function showPage()
+    public function createQuizTitle()
     {
-        $pageTitle = 'Your Page Title';
-        return view('your.view', compact('pageTitle'));
+        $pageTitle = 'Create Quiz';
+        return view('layouts.navbarTwo', compact('pageTitle'));
     }
 }

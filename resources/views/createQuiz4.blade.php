@@ -23,25 +23,25 @@
                 <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
-                <div class="step-layout-button" id="second-step">
+                <div class="step-layout-button-diff" id="second-step">
                     <p class="spacing" id="number2">2</p>
                     <p class="spacing" id="desc2">Subject</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
-                <div href="" class="step-layout-button" id="third-step">
+                <div href="" class="step-layout-button-diff" id="third-step">
                     <p class="spacing" id="number3">3</p>
                     <p class="spacing" id="desc3">Topic</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
-                <div href="" class="step-layout-button" id="fourth-step">
+                <div href="" class="step-layout-button-diff" id="fourth-step">
                     <p class="spacing" id="number4">4</p>
                     <p class="spacing" id="desc4">Information</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
                 <div href="" class="step-layout-button" id="fifth-step">
@@ -58,21 +58,8 @@
             </div>
         </div>
         <div class="content">
-            {{-- <h1 class="content-title">Select class</h1>
-            <div class="content">
-                <div class="dropdown">
-                    <button class="dropdown-button">Select</button>
-                    <div class="dropdown-content">
-                        @foreach ($classes as $class)
-                            <a href="" data-value="{{ $class['ClassroomName'] }}">{{ $class["ClassroomName"] }}</a>
-                        @endforeach
-                    </div>
-                </div>
-            </div> --}}
-            <div>
-
-            </div>
-            <h1> Add quiz detail </h1>
+            <div class="content-wrap">
+                <h1> Add quiz detail </h1>
                 <div class="spaceInput">
                     <div class="label">
                         <div class="horizontal">
@@ -92,7 +79,7 @@
                     </div>
                     <textarea id="QuizInformations" name="QuizInformations" rows="6" class="lengthBox2"></textarea>
                 </div>
-                <div class="spaceInput">
+                <div class="spaceInput2">
                     <div class = "horizontal-col">
                         <div>
                             <div class="label">
@@ -122,6 +109,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         <div class="action-button">
