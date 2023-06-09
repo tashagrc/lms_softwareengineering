@@ -18,3 +18,4 @@ class Classroom extends Model
     }
 
 }
+

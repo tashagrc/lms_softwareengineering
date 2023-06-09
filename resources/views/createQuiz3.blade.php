@@ -63,8 +63,8 @@
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
-                        @foreach ($courses as $course)
-                            <a href="{{ url('createQuiz1/createQuiz2/createQuiz3', $course->CourseID) }}" class="class-name">{{ $course->CourseName }}</a>
+                        @foreach ($sessions as $session)
+                            <a href="{{ url('createQuiz1/createQuiz2/createQuiz3', $session->SessionID) }}" class="class-name">{{ $session->SessionTopic }}</a>
                         @endforeach
                     </div>
                 </div>

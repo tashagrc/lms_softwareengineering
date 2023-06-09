@@ -1,4 +1,4 @@
-@extends('layouts.nav44rTwo')
+@extends('layouts.navbarTwo')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,16 +64,16 @@
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
                         @foreach ($classes as $class)
-                            <a href="" data-value="{{ $class['ClassroomName'] }}">{{ $class["ClassroomName"] }}</a>
+                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name">{{ $class->ClassroomName }}</a>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
-        <div class="action-button">
+        {{-- <div class="action-button">
             <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
             </button>
-        </div>
+        </div> --}}
     </div>
 
 </body>
