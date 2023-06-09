@@ -1,0 +1,10 @@
+.table-row-odd {
+    background-color: pink;
+}
+h1{
+    color:blue;
+}
+table{
+    font-size: 32px;
+    border-spacing: 10px;
+}

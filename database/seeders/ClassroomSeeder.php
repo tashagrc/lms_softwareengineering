@@ -17,13 +17,13 @@ class ClassroomSeeder extends Seeder
         DB::table('classrooms')->insert([
             [
                 'ClassroomID' => 1,
-                'ClassroomName' => 'Classroom 1',
+                'ClassroomName' => '10 Science 1',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'ClassroomID' => 2,
-                'ClassroomName' => 'Classroom 2',
+                'ClassroomName' => '11 Social 2',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
