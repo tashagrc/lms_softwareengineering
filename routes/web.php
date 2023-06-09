@@ -50,14 +50,12 @@ Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
 Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
 Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
 
-
-
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
-
 
 Route::get('/navbarFour', function () {
     return view('layouts/navbarFour');
 });
+
 Route::get('/quizList', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 

@@ -52,7 +52,7 @@
         <div class="right-side">
         <div class="right-bar">
             <div class="title">
-                <h1>{{ $pageTitle }}</h1>
+                <h1> Create Quiz </h1>
             </div>
             <div class="detail-row">
                 <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
