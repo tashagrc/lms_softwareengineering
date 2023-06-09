@@ -8,18 +8,27 @@ use Illuminate\Database\Eloquent\Model;
 class Quiz extends Model
 {
     use HasFactory;
-    public function questions() {
+
+    public function questions()
+    {
         return $this->hasMany(Question::class);
     }
 
-    public function classrooms() {
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
+    public function classroom()
+    {
         return $this->belongsTo(Classroom::class);
     }
 
-    public function answers() {
+    public function answers()
+    {
         return $this->hasMany(Answer::class);
     }
 
     protected $primaryKey = 'QuizID';
-
 }
+

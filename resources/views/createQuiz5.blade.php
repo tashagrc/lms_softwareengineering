@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ asset('/css/createQuiz1Style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/createQuiz5Style.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -58,22 +58,39 @@
             </div>
         </div>
         <div class="content">
-            <h1 class="content-title">Select class</h1>
-            <div class="content">
-                <div class="dropdown">
-                    <button class="dropdown-button">Select</button>
-                    <div class="dropdown-content">
-                        @foreach ($classes as $class)
-                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name">{{ $class->ClassroomName }}</a>
-                        @endforeach
+            <div class = "end-to-end">
+                <h1> Questions </h1>
+                <div class="right">
+                    <p class="textTotalQuestion"> Total quetions: </p>
+                    {{-- Isi Data --}}
+                </div>
+            </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Article </p>
+                            <p class="warna-pas">*</p>
+                        </div>
                     </div>
+                    <textarea id="w3review" name="w3review" rows="6" class="lengthBox2"></textarea>
+
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Add Questions </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
                 </div>
             </div>
         </div>
-        {{-- <div class="action-button">
-            <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
-            </button>
-        </div> --}}
+        <div class="action-button">
+            {{-- <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
+            </button> --}}
+        </div>
     </div>
 
 </body>

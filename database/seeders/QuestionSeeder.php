@@ -17,14 +17,21 @@ class QuestionSeeder extends Seeder
         DB::table('questions')->insert([
             [
                 'QuestionID' => 1,
-                'QuestionTitle' => 'Question 1',
+                'QuestionTitle' => 'Main topic',
                 'QuizID' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'QuestionID' => 2,
-                'QuestionTitle' => 'Question 2',
+                'QuestionTitle' => 'The purpose of the article',
+                'QuizID' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'QuestionID' => 3,
+                'QuestionTitle' => 'Conclusion',
                 'QuizID' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
