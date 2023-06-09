@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ asset('/css/createQuiz1Style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/createQuiz4Style.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="content">
-            <h1 class="content-title">Select class</h1>
+            {{-- <h1 class="content-title">Select class</h1>
             <div class="content">
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
@@ -68,11 +68,65 @@
                         @endforeach
                     </div>
                 </div>
+            </div> --}}
+            <div>
+
+            </div>
+            <h1> Add quiz detail </h1>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Quiz Name </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Informations </p>
+                        </div>
+
+                    </div>
+                    <textarea id="QuizInformations" name="QuizInformations" rows="6" class="lengthBox2"></textarea>
+                </div>
+                <div class="spaceInput">
+                    <div class = "horizontal-col">
+                        <div>
+                            <div class="label">
+                                <div class="horizontal">
+                                    <p> Date </p>
+                                </div>
+
+                            </div>
+                            <input type="date" id="QuizDate" name="QuizDate" class="lengthBox3">
+                        </div>
+                        <div>
+                            <div class="label">
+                                <div class="horizontal">
+                                    <p> Start Time </p>
+                                </div>
+
+                            </div>
+                            <input type="time" id="QuizStart" name="QuizStart" class="lengthBox3">
+                        </div>
+                        <div>
+                            <div class="label">
+                                <div class="horizontal">
+                                    <p> End Time </p>
+                                </div>
+                            </div>
+                            <input type="time"id="QuizEnd" name="QuizEnd" class="lengthBox3">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="action-button">
-            <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
-            </button>
+            {{-- <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
+            </button> --}}
         </div>
     </div>
 

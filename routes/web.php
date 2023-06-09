@@ -43,7 +43,13 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
 
-Route::get('/quiz', [QuizController::class, 'show']);
+Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
+Route::get('createQuiz2/{clickedValue}', [CreateQuiz2Controller::class, 'index'])->name('createQuiz2');
+
+Route::get('/navbarFour', function () {
+    return view('layouts/navbarFour');
+});
+Route::get('/quizList', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
@@ -51,11 +57,28 @@ Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetail
 Route::get('/answer/{QuizID}', [QuestionController::class, 'showQuestion']);
 Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers'])->name('save.answers');
 
-// <<<<<<< master
-// Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
+Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
 
-// Route::get('/achievement', [AchievementController::class, 'show']);
+Route::get('/achievement', [AchievementController::class, 'show']);
 
-// Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
-// =======
-// >>>>>>> master
+Route::get('/navbarTwo', function () {
+    return view('layouts/navbarTwo');
+});
+
+Route::get('/navbarOne', function () {
+    return view('layouts/navbarOne');
+});
+
+Route::get('/navbarThree', function () {
+    return view('layouts/navbarThree');
+});
+
+Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+
+Route::get('/createQuiz4', function () {
+    return view('createQuiz4');
+});
+
+Route::get('/createQuiz5', function () {
+    return view('createQuiz5');
+});
