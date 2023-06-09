@@ -1,7 +1,7 @@
 .content-middle{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
 }
 
 .steps{
@@ -63,15 +63,13 @@
 }
 
 #number4{
-    color: white;
-    background-color: #C93B25;
+    border: 1px solid #404040;
     border-radius: 100%;
     padding: 0.5px 8px;
 }
 
 #number5{
-    color: white;
-    background-color: #C93B25;
+    border: 1px solid #404040;
     border-radius: 100%;
     padding: 0.5px 8px;
 }
@@ -100,21 +98,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-
-.content-wrap{
-    margin-right: 200px;
-}
-
-.content h1{
-    font-size: 24px;
-    color: #404040;
+    margin-bottom: 100px;
 }
 
 .content-title{
     color: #404040;
     font-size: 30px;
+    margin-top: 150px;
 }
 
 .dropdown{
@@ -129,6 +119,8 @@
     background-color: white;
     padding: 0px 200px;
     font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -138,11 +130,9 @@
     border-radius: 10px;
     padding: 0px 200px 0px 0px;
     width: 100%;
-    transition: 0.3s;
-    cursor: pointer;
 }
 
-.dropdown-content a {
+  .dropdown-content a {
     font-size: 15px;
     color: #404040;
     padding: 12px 16px;
@@ -150,7 +140,7 @@
     text-decoration: none;
     display: block;
     font-weight: bold;
-}
+  }
 
 .dropdown-content a:hover {
     /* background-color: #f9f9f9; */
@@ -159,91 +149,12 @@
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropdown-button {
-    background-color: #C93B25;
-    color: white;
-    border: none;
-}
-
-.warna-pas{
-    color: #C93B25;
-    padding-left: 7px;
-}
-
-.from-pas{
-    display: flex;
-    margin-top: 0px;
-}
-
-.spaceInput{
-    padding-bottom: 16px;
-}
-
-.sectionPass{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 14px;
-    font-size: 18px;
-}
-
-.label{
-    display:block;
-}
-
-.horizontal{
-    display: flex;
-}
-
-.lengthBox{
-    width: 450px;
-    height: 34px;
-    border-radius: 5px;
-    border-color:#857979;
-    border: 1px solid #857979;
-    padding-left: 10px;
-}
-
-.lengthBox2{
-    width: 450px;
-    border-radius: 5px;
-    border-color:#857979;
-    border: 1px solid #857979;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.horizontal-col{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
-    margin-right: 50px;
-}
-
-.lengthBox3{
-    width: 120px;
-    border-radius: 5px;
-    border-color:#857979;
-    border: 1px solid #857979;
-    padding: 10px;
-}
-
-.end-to-end{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-    align-items: center;
-	align-content: stretch;
-    padding-top: 50px;
-}
-
-.textTotalQuestion{
-    font-size: 14px;
+  background-color: #C93B25;
+  color: white;
+  border: none;
 }

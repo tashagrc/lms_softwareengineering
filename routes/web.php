@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CreateQuiz1Controller;
 use App\Http\Controllers\CreateQuiz2Controller;
 use App\Http\Controllers\CreateQuiz3Controller;
+use App\Http\Controllers\PageController;
 
 
 /*
@@ -80,18 +81,17 @@ Route::get('/navbarOne', function () {
 Route::get('/navbarThree', function () {
     return view('layouts/navbarThree');
 });
-// <<<<<<< master
 
-// Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
 
-// Route::get('/createQuiz4', function () {
-//     return view('createQuiz4');
-// });
+Route::get('/createQuiz4', function () {
+    return view('createQuiz4');
+});
 
-// Route::get('/createQuiz5', function () {
-//     return view('createQuiz5');
-// });
-// =======
-// Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+Route::get('/createQuiz5', function () {
+    return view('createQuiz5');
+});
 
-// >>>>>>> master
+Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+
+Route::get('/navbarTwo', [PageController::class, 'createQuizTitle']);

@@ -117,6 +117,8 @@
     background-color: white;
     padding: 0px 200px;
     font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .dropdown-content {
