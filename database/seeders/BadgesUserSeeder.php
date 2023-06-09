@@ -23,7 +23,7 @@ class BadgesUserSeeder extends Seeder
             ],
             [
                 'BadgesID' => 2,
-                'UserID' => 2,
+                'UserID' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
