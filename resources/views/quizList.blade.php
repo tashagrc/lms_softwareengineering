@@ -1,4 +1,4 @@
-{{-- @extends('layouts.navbarFour')
+@extends('layouts.navbarFour')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,22 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quiz</title>
+    <title>ReadRacoon</title>
 </head>
 <body>
 
-@section('container') --}}
+    @section('title')
+    <b>Quiz</b>
+    @endsection
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
-<body>
+@section('container')
 
 </body>
 </html>
@@ -42,13 +35,9 @@
     </div>
     @endforeach
 
-
-
-
-
-{{-- </body>
+</body>
 </html>
-@endsection --}}
+@endsection
 
 
 

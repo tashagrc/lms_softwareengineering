@@ -18,9 +18,9 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'UserID' => 1,
-                'UserName' => 'John Doe',
-                'UserEmail' => 'johndoe@example.com',
-                'UserPassword' => bcrypt('password123'),
+                'UserName' => 'Michael Varian',
+                'UserEmail' => 'michael@google.com',
+                'UserPassword' => 'mikel123',
                 'UserXP' => 0,
                 'UserDateJoined' => Carbon::now(),
                 'UserRole' => 'Student',
@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
                 'UserID' => 2,
                 'UserName' => 'Jane Smith',
                 'UserEmail' => 'janesmith@example.com',
-                'UserPassword' => bcrypt('password456'),
+                'UserPassword' => 'mikel123',
                 'UserXP' => 0,
                 'UserDateJoined' => Carbon::now(),
                 'UserRole' => 'Student',

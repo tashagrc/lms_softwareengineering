@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ asset('/css/createQuiz1Style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/createQuiz3Style.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -23,18 +23,18 @@
                 <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
-                <div class="step-layout-button" id="second-step">
+                <div class="step-layout-button-diff" id="second-step">
                     <p class="spacing" id="number2">2</p>
                     <p class="spacing" id="desc2">Subject</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
-                <div href="" class="step-layout-button" id="third-step">
+                <div href="" class="step-layout-button-diff" id="third-step">
                     <p class="spacing" id="number3">3</p>
                     <p class="spacing" id="desc3">Topic</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
                 <div href="" class="step-layout-button" id="fourth-step">
@@ -58,24 +58,23 @@
             </div>
         </div>
         <div class="content">
-            <h1 class="content-title">Select class</h1>
+            <h1 class="content-title">Select subject</h1>
             <div class="content">
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
-                        @foreach ($classes as $class)
-                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name">{{ $class->ClassroomName }}</a>
+                        @foreach ($sessions as $session)
+                            <a href="{{ url('createQuiz1/createQuiz2/createQuiz3', $session->SessionID) }}" class="class-name">{{ $session->SessionTopic }}</a>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
         {{-- <div class="action-button">
-            <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
-            </button>
+            <button class="savecontinue">Save & Continue</button>
         </div> --}}
     </div>
-
+    <script src="js/tes.js"></script>
 </body>
 </html>
 @endsection
