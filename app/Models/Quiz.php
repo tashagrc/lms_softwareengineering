@@ -30,5 +30,6 @@ class Quiz extends Model
     }
 
     protected $primaryKey = 'QuizID';
+
 }
 
