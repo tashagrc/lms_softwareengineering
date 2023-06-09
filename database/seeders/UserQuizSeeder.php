@@ -25,8 +25,8 @@ class UserQuizSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'UserID' => 2,
-                'QuizID' => 1,
+                'UserID' => 1,
+                'QuizID' => 2,
                 'QuizScore' => 90,
                 'StatusPlayed' => true,
                 'FinishedDateTime' => now(),
