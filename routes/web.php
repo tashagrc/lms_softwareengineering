@@ -80,5 +80,18 @@ Route::get('/navbarOne', function () {
 Route::get('/navbarThree', function () {
     return view('layouts/navbarThree');
 });
-Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+// <<<<<<< master
 
+// Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+
+// Route::get('/createQuiz4', function () {
+//     return view('createQuiz4');
+// });
+
+// Route::get('/createQuiz5', function () {
+//     return view('createQuiz5');
+// });
+// =======
+// Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
+
+// >>>>>>> master
