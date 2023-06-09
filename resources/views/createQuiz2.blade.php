@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ asset('/css/createQuiz1Style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/createQuiz2Style.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -23,11 +23,11 @@
                 <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
-                <div class="step-layout-button" id="second-step">
+                <div class="step-layout-button-diff" id="second-step">
                     <p class="spacing" id="number2">2</p>
                     <p class="spacing" id="desc2">Subject</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                <p class="spacing" id="arrow-diff">></p>
             </div>
             <div class="step-layout">
                 <div href="" class="step-layout-button" id="third-step">
@@ -70,9 +70,9 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="action-button">
-            <button class="savecontinue">Save & Continue</button>
-        </div> --}}
+            {{-- <div class="action-button">
+                <button class="savecontinue">Save & Continue</button>
+            </div> --}}
     </div>
     <script src="js/tes.js"></script>
 </body>

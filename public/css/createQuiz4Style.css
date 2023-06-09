@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left:25%;
 }
 
 .steps{
@@ -50,19 +49,22 @@
 }
 
 #number2{
-    border: 1px solid #404040;
+    color: white;
+    background-color: #C93B25;
     border-radius: 100%;
     padding: 0.5px 8px;
 }
 
 #number3{
-    border: 1px solid #404040;
+    color: white;
+    background-color: #C93B25;
     border-radius: 100%;
     padding: 0.5px 8px;
 }
 
 #number4{
-    border: 1px solid #404040;
+    color: white;
+    background-color: #C93B25;
     border-radius: 100%;
     padding: 0.5px 8px;
 }
@@ -96,11 +98,14 @@
 .content{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    margin-bottom: 100px;
-    margin-left: 200px;
-    margin-right: 440px;
+    align-items: center;
+    width: 100%;
 }
+
+.content-wrap{
+    margin-right: 200px;
+}
+
 
 .content h1{
     padding-top: 50px;
@@ -125,6 +130,8 @@
     background-color: white;
     padding: 0px 200px;
     font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -177,6 +184,13 @@
     padding-bottom: 16px;
 }
 
+.spaceInput2{
+    /* padding-bottom: 16px; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .sectionPass{
     display: flex;
     justify-content: space-between;
@@ -213,11 +227,8 @@
 .horizontal-col{
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
-    margin-right: 50px;
+    width: 100%;
 }
 
 .lengthBox3{
