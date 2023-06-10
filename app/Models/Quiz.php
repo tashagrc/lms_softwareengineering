@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use PDO;
 
 class Quiz extends Model
 {
@@ -27,6 +28,10 @@ class Quiz extends Model
     public function answers()
     {
         return $this->hasMany(Answer::class);
+    }
+
+    public function information(){
+        return $this->belongsTo(Quiz::class);
     }
 
     protected $primaryKey = 'QuizID';
