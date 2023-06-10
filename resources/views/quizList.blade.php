@@ -27,9 +27,12 @@
             <h6 class="card-subtitle mb-2 text-muted">{{$q['CourseName']}} </h6>
             <h6 class="card-subtitle mb-2 text-muted">{{$q['QuizDate']}} </h6>
             <h6 class="card-subtitle mb-2 text-muted">{{ \Carbon\Carbon::parse($q['QuizEnd'])->diffInMinutes(\Carbon\Carbon::parse($q['QuizStart'])) }} min</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{$q['QuizScore']}} </h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{$q['StatusPlayed']}} </h6>
-            <a href="{{url('quizList/quizDetails', $q->QuizID)}}" class="card-link">Play</a>
+            @if($q['StatusPlayed'] == true)
+                <h6 class="card-subtitle mb-2 text-muted">{{$q['QuizScore']}} </h6>
+            @else
+                <a href="{{url('quizList/quizDetails', $q->QuizID)}}" class="card-link">Play</a>
+            @endif
+
         </div>
     </div>
     @endforeach
