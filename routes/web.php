@@ -101,3 +101,19 @@ Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::c
 
 Route::get('/navbarTwo', [PageController::class, 'createQuizTitle']);
 
+Route::get('navbar2', function() {
+    return view('layouts/navbarTwo');
+});
+
+Route::get('navbar3', function() {
+    return view('layouts/navbarThree');
+});
+
+Route::get('navbar1', function() {
+    return view('layouts/navbarOne');
+});
+
+Route::get('navbar4', function() {
+    return view('layouts/navbarFour');
+});
+
