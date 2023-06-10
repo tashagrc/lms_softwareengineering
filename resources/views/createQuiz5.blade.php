@@ -1,4 +1,4 @@
-@extends('layouts.navbarTwo')
+@extends('layouts.navbarCreateQuiz')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,13 +59,13 @@
         </div>
         <div class="content">
             <div class="content-wrap">
-<div class = "end-to-end">
-                <h1> Questions </h1>
-                <div class="right">
-                    <p class="textTotalQuestion"> Total quetions: </p>
-                    {{-- Isi Data --}}
+                <div class = "end-to-end">
+                    <h1> Questions </h1>
+                    <div class="right">
+                        <p class="textTotalQuestion"> Total quetions: </p>
+                        {{-- Isi Data --}}
+                    </div>
                 </div>
-            </div>
                 <div class="spaceInput">
                     <div class="label">
                         <div class="horizontal">
@@ -88,7 +88,7 @@
                 </div>
             </div>
             </div>
-            
+
         </div>
         <div class="action-button">
             {{-- <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
