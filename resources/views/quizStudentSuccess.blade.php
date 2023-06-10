@@ -1,4 +1,4 @@
-@extends('layouts.navbarFour')
+@extends('layouts.navbarTwo')
 
 <!DOCTYPE html>
 <html lang="en">
