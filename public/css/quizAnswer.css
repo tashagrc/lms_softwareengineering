@@ -16,3 +16,29 @@
     font-size: 14px;
 }
 
+.text-box {
+    width: 70vw;
+    height: 20vh;
+    background-color: #FEF7F7;
+    border-radius: 20px;
+    border-width: 0px;
+    padding-left: 20px;
+}
+
+.question-title {
+    background-color: #C93B25;
+    color: white;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.save-ans {
+    margin-top: 10vh;
+    background-color: #C93B25;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    border-width: 0px;
+    padding-left:25px;
+    padding-right:25px;
+}
