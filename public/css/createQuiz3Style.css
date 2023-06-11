@@ -49,13 +49,15 @@
 }
 
 #number2{
-    border: 1px solid #404040;
+    color: white;
+    background-color: #C93B25;
     border-radius: 100%;
     padding: 0.5px 8px;
 }
 
 #number3{
-    border: 1px solid #404040;
+    color: white;
+    background-color: #C93B25;
     border-radius: 100%;
     padding: 0.5px 8px;
 }

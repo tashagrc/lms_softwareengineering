@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="{{ asset('/css/navbarFour.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
         </div>
         <div class="middle-bar" style="display: flex; flex-direction:column">
             <div class="title" style="padding-top:20px">
-                <h3>Dashboard</h3>
+                <h3>@yield('title')</h3>
             </div>
             <br/>
             <div class="container">
@@ -70,9 +70,18 @@
             <div class="user-profile">
                 <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp">
                 <h1 class="nama">Hi, NAMA</h1>
+                <span class="badge text-dark">
+                    <img src="{{ asset('img/star.png') }}" alt="description of myimage" class="star">
+                    Warrior</span>
+{{--
                 <div class="badge">
                     <img src="{{ asset('img/star.png') }}" alt="description of myimage" class="star">
-                    <p>Warrior</p>
+                    <p class="text-black">Warrior</p>
+                </div> --}}
+            </div>
+            <div class="card m-2">
+                <div class="card-body">
+                <h6 style="font-size: 14px">Earn 1200 xp to level up</h6>
                 </div>
             </div>
             <div class="progress">
