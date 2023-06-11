@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RedRacoon</title>
+    <title>ReadRacoon</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/racoon.svg') }}">
     <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
 </head>
 <body>
