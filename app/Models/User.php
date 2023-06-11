@@ -59,8 +59,9 @@ class User extends Authenticatable
 
     }
 
-    public function classrooms() {
-        return $this->belongsTo(Classroom::class);
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class, 'ClassroomID');
     }
 
 
@@ -68,4 +69,5 @@ class User extends Authenticatable
     {
         return $this->hasOne(UserQuiz::class, 'UserID', 'UserID');
     }
+    
 }

@@ -26,7 +26,7 @@
             @foreach($grades as $g)
                 <tr class="{{ $numeral % 2 == 0 ? 'table-row-odd' : '' }}">
                     <td>{{ $numeral }}</td>
-                    <td>{{ $g->answer->AnswerMainTopic}}</td>
+                    <td>{{ $g->answer->AnswerContent}}</td>
                     <td>{{ $g->FinishedDateTime}}</td>
                     <td>{{$g->QuizScore}}</td>
                     <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">...</a></td>

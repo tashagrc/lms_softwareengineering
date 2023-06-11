@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 .table-row-odd {
     background-color: pink;
+}
+.table-row-odd td {
+    border: 5px solid pink;
 }
 h1{
     color:blue;
 }
 table{
-    font-size: 32px;
+    font-size: 22px;
     border-spacing: 10px;
+    font-family: 'Poppins', sans-serif;
 }

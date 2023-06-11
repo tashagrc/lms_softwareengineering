@@ -21,4 +21,8 @@ class UserQuiz extends Model
     {
         return $this->hasOne(Answer::class, 'UserID', 'UserID');
     }
+    public function quiz()
+{
+    return $this->belongsTo(Quiz::class, 'quizID');
+}
 }

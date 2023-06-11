@@ -9,12 +9,14 @@ class Classroom extends Model
 {
     use HasFactory;
     protected $primaryKey = 'ClassroomID';
-    public function users() {
-        return $this->hasMany(User::class);
+    public function users()
+    {
+        return $this->hasMany(User::class, 'ClassroomID');
     }
 
     public function quizzes() {
         return $this->hasMany(Quiz::class);
     }
+
 
 }

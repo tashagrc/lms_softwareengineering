@@ -19,7 +19,10 @@ class Quiz extends Model
     public function answers() {
         return $this->hasMany(Answer::class);
     }
-
+    public function userQuizzes()
+{
+    return $this->hasMany(UserQuiz::class, 'quizID');
+}
     protected $primaryKey = 'QuizID';
 
 }
