@@ -1,11 +1,11 @@
 <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
-@extends('layouts.navbarTwo')
+@extends('layouts.navbarTwoForStudent')
 
 @section('container')
-<div class="container">
-    <div class="row">
-        <div class="col" style="margin-left:15%">
+<div class="container mx-auto">
+    <div class="row" style="width: 70vw">
+        <div class="col" >
             <div class="card w-100 mb-3">
                 <div class="card-body d-flex p-4">
                     <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="sections d-flex">
-                <div class="card mb-3 me-4" style="width: 40rem">
+                <div class="card mb-3 me-4" style="width: 35vw">
                     <div class="card-body">
                       <h5 class="card-title fw-bold">Personal Information</h5>
                         <div class="mb-3">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3" style="">
+                <div class="card mb-3" style="width:35vw">
                     <div class="card-body">
                       <h5 class="card-title fw-bold">Change Password</h5>
                         <label for="inputPassword5" class="form-label">Current Password</label>

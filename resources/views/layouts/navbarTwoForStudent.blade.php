@@ -36,20 +36,20 @@
                         </div>
                     </a>
                 </div>
-                <a href="" class="button-link">
+                <a href="{{url('/editProfile')}}" class="button-link">
                     <div class="setting">
                         <img src="{{ asset('img/setting.png') }}" alt="description of myimage">
                         <p>Settings</p>
                     </div>
                 </a>
                 @auth
-                    <form action="/logout" method="post">
-                        @csrf
-                        <button type="submit" class="btn btn-outline-danger mt-2" style="width:120px">
-                            Logout
-                        </button>
-                    </form>
-                @endauth
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger mt-2" style="width:120px">
+                        Logout
+                    </button>
+                </form>
+            @endauth
             </div>
         </div>
         <div class="right-side">
