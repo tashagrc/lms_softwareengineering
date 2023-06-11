@@ -28,13 +28,13 @@
                             <p>Courses</p>
                         </div>
                     </a>
-                    <a href="" class="button-link">
+                    <a href="{{url('/createQuiz1')}}" class="button-link">
                         <div class="quiz">
                             <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">
                             <p>Quiz</p>
                         </div>
                     </a>
-                    <a href="#" class="button-link">
+                    <a href="{{url('/grade')}}" class="button-link">
                         <div class="grade">
                             <img src="{{ asset('img/grade.png') }}" alt="description of myimage">
                             <p>Grade</p>
