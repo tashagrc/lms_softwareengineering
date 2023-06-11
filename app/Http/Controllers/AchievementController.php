@@ -11,6 +11,7 @@ class AchievementController extends Controller
     function show() {
         $badges = Badges::all();
         $leaderboard = User::orderBy('UserXP', 'desc')->get();
-        return view('achievement', compact('badges', 'leaderboard'));
+        $curruser = User::find(1);
+        return view('achievement', compact('badges', 'leaderboard', 'curruser'));
     }
 }

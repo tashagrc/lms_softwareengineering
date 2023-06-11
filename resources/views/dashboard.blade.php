@@ -1,7 +1,13 @@
 
 <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/dashboard.css') }}">
 
 @extends('layouts.navbarFour')
+
+@section('title')
+<b>Dashboard</b>
+@endsection
+
 @section('container')
 
     @guest
@@ -10,17 +16,7 @@
         </h1>
     @endguest
 
-    @auth
-        <h2>
-            <form action="/logout" method="post">
-                @csrf
-                <button>
-                    Logout
-                </button>
-            </form>
 
-        </h2>
-    @endauth
     {{-- QUIZ BANNER --}}
     <div class="container-sm">
         <div class="row">
@@ -29,10 +25,11 @@
                     <div class="card-body d-flex justify-content-between p-4">
                         <div class="words">
                             <h5 class="card-title fs-2 fw-bold text-danger">Literacy Quiz #5</h5>
-                            <p class="card-text">Historical Literacy | Bayu S | 27 Students</p>
+                            <br>
+                            <p class="card-text">Historical Literacy &#x2022; Bayu S &#x2022; 27 Students</p>
                         </div>
                         <div class="action">
-                            <a href="#" class="btn btn-danger btn-lg">Play</a>
+                            <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
                         </div>
                     </div>
                 </div>
@@ -43,18 +40,27 @@
                         <div class="card-body m-2">
                         <h5 class="card-title fs-5">Historical Literacy</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Class Progress</h6>
+                        <div class="progress-container">
+                            <div class="progress-sec" style="width: 40%"></div>
+                        </div>
                         </div>
                     </div>
                     <div class="card m-2" style="width: 18rem;">
                         <div class="card-body m-2">
                         <h5 class="card-title fs-5">Biological Literacy</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Class Progress</h6>
+                        <div class="progress-container">
+                            <div class="progress-sec" style="width: 40%"></div>
+                        </div>
                         </div>
                     </div>
                     <div class="card m-2" style="width: 18rem;">
                         <div class="card-body m-2">
                         <h5 class="card-title fs-5">English Literacy</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Class Progress</h6>
+                        <div class="progress-container">
+                            <div class="progress-sec" style="width: 40%"></div>
+                        </div>
                         </div>
                     </div>
                 </div>

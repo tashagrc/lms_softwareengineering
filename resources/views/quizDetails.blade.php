@@ -1,4 +1,4 @@
-@extends('layouts.navbarTwo')
+@extends('layouts.navbarTwoForStudent')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ReadRacoon</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/quizAnswer.css') }}">
 </head>
 <body>
 
@@ -17,26 +19,61 @@
 
 </body>
 </html>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 70vw">
         <div class="card-body">
-            <h5>Class: {{$quiz['ClassroomName']}}</h5>
-            <h5>Subject: {{$quiz['CourseName']}}</h5>
-            <h5>Topic: {{$quiz['SessionTopic']}}</h5>
-            <h5>Quiz Name: {{$quiz['QuizTitle']}}</h5>
-            <h5>Date: {{$quiz['QuizDate']}}</h5>
-            <h5>Time: {{$quiz['QuizStart']}} {{$quiz['QuizEnd']}}</h5>
-            <h5>Total question: {{$totalQuestion}}</h5>
+            <table class="table">
+                <tr>
+                  <td><b>Class</b></td>
+                  <td>{{$quiz['ClassroomName']}}</td>
+                </tr>
+                <tr>
+                  <td><b>Subject</b></td>
+                  <td>{{$quiz['CourseName']}}</td>
+                </tr>
+                <tr>
+                  <td><b>Topic</b></td>
+                  <td>{{$quiz['SessionTopic']}}</td>
+                </tr>
+                <tr>
+                  <td><b>Quiz Name</b></td>
+                  <td>{{$quiz['QuizTitle']}}</td>
+                </tr>
+                <tr>
+                  <td><b>Date</b></td>
+                  <td>{{$quiz['QuizDate']}}</td>
+                </tr>
+                <tr>
+                  <td><b>Time</b></td>
+                  <td>{{date('H:i', strtotime($quiz['QuizStart']))}} - {{date('H:i', strtotime($quiz['QuizEnd']))}}</td>
+                </tr>
+                <tr>
+                  <td><b>Total question</b></td>
+                  <td>{{$totalQuestion}}</td>
+                </tr>
+            </table>
         </div>
     </div>
 
-    <div>
-        <h1>Informations</h1>
-        <h5>{{$quiz['QuizPrepare']}}</h5>
+    <h5 class="info-title">Informations</h5>
+    <div class="row">
+        <div class="col-md-8">
+          <div class="card border-0 bg-card" style="width: 18rem;">
+            <div class="card-body" style="width:50vw">
+              <h5 class="text-prepare">{{$quiz['QuizPrepare']}}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-right">
+          <a href="{{url('answer', $quiz['QuizID'])}}" class="card-link">
+            <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
+          </a>
+        </div>
     </div>
 
-    <div>
-        <a href="{{url('answer', $quiz['QuizID'])}}" class="link">Play</a>
-    </div>
+
+
+
+
 </body>
 </html>
 @endsection
