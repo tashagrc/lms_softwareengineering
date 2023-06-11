@@ -19,7 +19,7 @@
     <h1>{{$article['SessionTopic']}}</h1>
     <p style="margin-bottom:10vh">{{$article['QuizArticle']}}</p>
 
-    <form action="{{ route('save.answers', ['QuizID' => $article->QuizID]) }}" method="POST">
+    <form action="{{ route('save.answers', ['QuizID' => $article->QuizID]) }}" method="POST" onsubmit="return confirm('Are you sure with your answer?');">
         @csrf
         @foreach($question as $q)
             <p class="question-title">{{ $q['QuestionTitle'] }}</p>
