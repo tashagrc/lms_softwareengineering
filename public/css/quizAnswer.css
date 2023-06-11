@@ -42,3 +42,32 @@
     padding-left:25px;
     padding-right:25px;
 }
+
+.center {
+    text-align: center;
+}
+
+.img-success {
+    margin-top: 10vh;
+    width: 15vw;
+    height: auto;
+}
+
+.star-xp {
+    width:20px;
+    display: inline-block;
+}
+
+.text-xp {
+    display: inline-block;
+}
+
+.dashboard-link {
+    color: #C93B25;
+    text-decoration: none;
+}
+
+.xp-container {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}

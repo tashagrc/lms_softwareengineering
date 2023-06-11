@@ -25,7 +25,7 @@
                         <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp" style="width:10%; height:10%">
                         <div class="details d-flex flex-column mx-4">
                             <div class="words d-flex pe-4">
-                                <h5 class="card-title fs-2 fw-bold text-danger">Agnes Anastasia</h5>
+                                <h5 class="card-title fs-2 fw-bold text-danger">{{$curruser["UserName"]}}</h5>
                                 <span class="badge text-dark d-flex align-items-center">
                                     <img src="{{ asset('img/star.svg') }}" alt="description of myimage" class="star" style="width:25px">
                                     <span class="ms-2">Warrior</span>
