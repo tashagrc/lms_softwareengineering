@@ -1,4 +1,4 @@
-@extends('layouts.navbarGradeSummary')
+@extends('layouts.navbarTwoForTeacher')
 
 <!DOCTYPE html>
 <html lang="en">
