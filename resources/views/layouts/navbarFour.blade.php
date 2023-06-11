@@ -12,7 +12,7 @@
 
     <div class="nav-row">
         <div class="left-bar">
-            <div class="logo">
+            <div class="logo pt-4">
                 <img src="{{ asset('img/logoReadRacoon.png') }}" alt="description of myimage">
             </div>
             <div class="pages-bar">
@@ -53,12 +53,14 @@
             @auth
                 <form action="/logout" method="post">
                     @csrf
-                    <button>Logout</button>
+                    <button type="button" class="btn btn-outline-danger mt-2" style="width:120px">
+                        Logout
+                    </button>
                 </form>
             @endauth
         </div>
         <div class="middle-bar" style="display: flex; flex-direction:column">
-            <div class="title" style="padding-top:20px">
+            <div class="title d-flex justify-content-start" style="padding-top:20px">
                 <h3>@yield('title')</h3>
             </div>
             <br/>
@@ -75,7 +77,7 @@
                 <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
             </div>
             <div class="user-profile">
-                <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp">
+                <img src="{{ asset('img/profile.svg') }}" alt="description of myimage" class="pp">
                 <h1 class="nama">Hi, Michael Varian</h1>
                 <span class="badge text-dark">
                     <img src="{{ asset('img/star.png') }}" alt="description of myimage" class="star">
@@ -86,32 +88,43 @@
                     <p class="text-black">Warrior</p>
                 </div> --}}
             </div>
-            <div class="card m-2 border-0">
+            <div class="card">
                 <div class="card-body">
-                <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
+                    <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-sec" style="width: 40%"></div>
                 </div>
             </div>
-            <div class="progress-container">
-                <div class="progress-sec" style="width: 40%"></div>
-            </div>
+
             <div class="history">
                 <div class="title-history">
                     <h1>Quizzes History</h1>
                     <a href="">View all</a>
                 </div>
                 <div class="history-detail">
+                    {{-- @foreach($quizzes as $q)
+
                     <a href="" class="button-link">
+
                         <div class="history-detail-row">
                             <div class="history-detail-col">
                                 <div class="title-detail">
-                                    <h1 class="title-black">Literacy Quiz</h1>
-                                    <h1 class="title-red">#1</h1>
+                                    <h5 class="card-title mb-3">{{$q['QuizTitle']}}</h5>
                                 </div>
-                                <p class="history-subject">Social Literacy</p>
+                                <h6 class="card-subtitle mb-2 text-muted">{{$q['CourseName']}} </h6>
                             </div>
-                            <h1 class="history-nilai">92</h1>
+                            @if($q['StatusPlayed'] == true)
+                                <h6 class="card-subtitle mb-2 text-muted">Score</h6>
+                                <h5 class="card-subtitle mb-2 font-weight-bold">{{$q['QuizScore']}} </h5>
+                            @else
+                                <a href="{{url('quizList/quizDetails', $q->QuizID)}}" class="card-link">
+                                    <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
+                                </a>
+                            @endif
                         </div>
                     </a>
+                    @endforeach --}}
                     <a href="" class="button-link">
                         <div class="history-detail-row">
                             <div class="history-detail-col">
