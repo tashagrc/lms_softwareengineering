@@ -14,7 +14,7 @@ use App\Http\Controllers\CreateQuiz1Controller;
 use App\Http\Controllers\CreateQuiz2Controller;
 use App\Http\Controllers\CreateQuiz3Controller;
 use App\Http\Controllers\PageController;
-
+use App\Http\Controllers\ViewGradeTeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -116,4 +116,3 @@ Route::get('navbar1', function() {
 Route::get('navbar4', function() {
     return view('layouts/navbarFour');
 });
-
