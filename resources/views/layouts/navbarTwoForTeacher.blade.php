@@ -47,6 +47,14 @@
                         <p>Settings</p>
                     </div>
                 </a>
+                @auth
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="button" class="btn btn-outline-danger mt-2" style="width:120px">
+                        Logout
+                    </button>
+                </form>
+                @endauth
             </div>
         </div>
         <div class="right-side">

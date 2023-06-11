@@ -29,7 +29,7 @@
                             <p class="card-text">Historical Literacy &#x2022; Bayu S &#x2022; 27 Students</p>
                         </div>
                         <div class="action">
-                            <a href="#" class="btn btn-danger btn-lg">Play</a>
+                            <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
                         </div>
                     </div>
                 </div>
