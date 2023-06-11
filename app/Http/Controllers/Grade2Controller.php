@@ -11,7 +11,7 @@ class Grade2Controller extends Controller
 {
     public function index()
     {
-        $grades = UserQuiz::with('answer')->get();
+        $grades = UserQuiz::join('quizzes', 'quizzes.QuizID', '=', 'user_quizzes.QuizID')->get();
 
         return view('viewGrade2', compact('grades'));
     }
