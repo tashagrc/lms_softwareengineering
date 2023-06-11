@@ -17,18 +17,6 @@
             </div>
             <div class="pages-bar">
                 <div class="section-1">
-                    <a href="{{url('/dashboard')}}" class="button-link">
-                        <div class="dashboard">
-                            <img src="{{ asset('img/home.png') }}" alt="description of myimage">
-                            <p>Dashboard</p>
-                        </div>
-                    </a>
-                    <a href="#" class="button-link">
-                        <div class="course">
-                            <img src="{{ asset('img/course.png') }}" alt="description of myimage">
-                            <p>Courses</p>
-                        </div>
-                    </a>
                     <a href="{{url('/createQuiz1')}}" class="button-link">
                         <div class="quiz">
                             <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">

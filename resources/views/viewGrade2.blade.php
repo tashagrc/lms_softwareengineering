@@ -47,3 +47,5 @@
     </table>
 </body>
 </html>
+
+@endsection

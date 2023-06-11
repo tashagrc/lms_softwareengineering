@@ -28,10 +28,6 @@ class QuizController extends Controller
     }
 
 
-    function createQuiz() {
-        return view('createQuiz1');
-    }
-
     function quizDetails($QuizID) {
 
         $quiz = Quiz::join('courses', 'courses.CourseID', '=', 'quizzes.CourseID')
