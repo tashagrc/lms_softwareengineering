@@ -22,7 +22,7 @@
             <div class="col-12">
                 <div class="card w-100 mb-3 card-container2">
                     <div class="card-body d-flex pd-2">
-                        <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp" style="width:10%; height:10%">
+                        <img src="{{ asset('img/profile.svg') }}" alt="description of myimage" class="pp" style="width:10%; height:10%">
                         <div class="details d-flex flex-column mx-4">
                             <div class="words d-flex pe-4">
                                 <h5 class="card-title fs-2 fw-bold text-danger">{{$curruser["UserName"]}}</h5>
@@ -64,7 +64,7 @@
                           @foreach($leaderboard as $user)
                           <a href="#" class="btn w-100 my-2" style="background-color:#FEF7F7">
                               <div class="details d-flex">
-                                  <img class="mx-3 align-self-start" src="{{ asset('img/profile.png') }}" alt="description of myimage" class="star" style="max-width: 50px; height: auto;">
+                                  <img class="me-3 align-self-start" src="{{ asset('img/profile.svg') }}" alt="description of myimage" class="star" style="max-width: 50px; height: auto;">
                                   <div class="text-start">
                                     <p>{{$user["UserName"]}}</p>
                                     <p>{{$user["UserXP"]}}</p>
@@ -80,6 +80,6 @@
             </div>
         </div>
     </div>
+    @endsection
 </body>
 </html>
-@endsection

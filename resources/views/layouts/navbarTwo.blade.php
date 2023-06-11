@@ -52,12 +52,12 @@
         <div class="right-side">
         <div class="right-bar">
             <div class="title">
-                <h1><b>@yield('title')</b></h1>
+                <h3><b>@yield('title')</b></h3>
             </div>
             <div class="detail-row">
                 <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
                 <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
-                <a href=""><img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp"></a>
+                <a href=""><img src="{{ asset('img/profile.svg') }}" alt="description of myimage" class="pp" style="width:50px;height:50px"></a>
             </div>
 
         </div>
