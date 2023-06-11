@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ReadRacoon</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
-    <link rel="stylesheet" href="css/quizAnswer.css">
+    <link rel="stylesheet" href="{{ asset('/css/quizAnswer.css') }}">
 </head>
 <body>
 
@@ -58,7 +58,7 @@
                     @else
                     <a href="{{url('quizList/quizDetails', $q->QuizID)}}" class="card-link">
                         <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
-                      </a>
+                    </a>
 
                     @endif
                   </div>

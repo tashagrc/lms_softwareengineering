@@ -11,7 +11,7 @@
 <body>
 
     @section('title')
-    <b>Quiz</b>
+    <b>{{$article['QuizTitle']}}</b>
     @endsection
 
 @section('container')
