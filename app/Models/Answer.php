@@ -9,11 +9,18 @@ class Answer extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'AnswerID';
+    protected $fillable = ['AnswerContent', 'QuizID', 'UserID'];
     public function users() {
         return $this->belongsTo(Answer::class);
     }
 
     public function quizzes() {
         return $this->belongsTo(Quiz::class);
+    }
+    
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'UserID', 'UserID');
     }
 }

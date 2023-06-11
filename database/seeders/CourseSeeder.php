@@ -17,13 +17,13 @@ class CourseSeeder extends Seeder
         DB::table('courses')->insert([
             [
                 'CourseID' => 1,
-                'CourseName' => 'Course 1',
+                'CourseName' => 'Historical Literacy',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'CourseID' => 2,
-                'CourseName' => 'Course 2',
+                'CourseName' => 'English Literacy',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

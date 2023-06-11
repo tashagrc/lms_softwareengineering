@@ -6,10 +6,12 @@
 
 body{
     margin: 0;
+    overflow-x:hidden;
 }
 
 .nav-row {
     display: flex;
+    position: absolute;
     width: 100%;
     min-height: 100vh;
 
@@ -23,7 +25,7 @@ body{
 .left-bar{
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: 20%;
     padding-top: 35px;
     padding-left: 65px;
     padding-right: 30px;
@@ -159,4 +161,8 @@ body{
     margin-top: 10px;
     margin-bottom: 80px;
     height: 100%;
+}
+
+.content-middle{
+    display: flex;
 }

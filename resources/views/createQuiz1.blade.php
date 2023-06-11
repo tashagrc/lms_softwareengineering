@@ -1,4 +1,4 @@
-@extends('layouts.navbarTwo')
+@extends('layouts.navbarTwoForTeacher')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="{{ asset('/css/createQuiz1Style.css') }}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -58,15 +59,23 @@
         </div>
         <div class="content">
             <h1 class="content-title">Select class</h1>
-            
+            <div class="content">
+                <div class="dropdown">
+                    <button class="dropdown-button">Select</button>
+                    <div class="dropdown-content">
+                        @foreach ($classes as $class)
+                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name">{{ $class->ClassroomName }}</a>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="action-button">
-            <a href=""><button class="savecontinue">Save & Continue</button></a>
-        </div>
+        {{-- <div class="action-button">
+            <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
+            </button>
+        </div> --}}
     </div>
-    
 
-    
 </body>
 </html>
 @endsection

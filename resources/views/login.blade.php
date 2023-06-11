@@ -23,11 +23,9 @@
                 @csrf
                 <div class="form">
                     <p class ="headingLogin"> Login </p>
-                    @if(session()->has('loginError'))
-                        <div class = "flash mt-3 flash-warn">
-                            Login failed!
-                        </div>
-                    @endif
+                    @error('login_failed')
+                        <p class="flash mt-3 flash-warn">Login failed!</p>
+                    @enderror
                     <div class="form-login">
                         <div class="spaceInput">
                             <label class ="lblEmail"> Email address </label>
@@ -43,17 +41,6 @@
                                 <label class="lblChangePassword"> Forgot Password? </label>
                             </div>
                             <input type="password" id="UserPassword" name ="UserPassword" class = "lengthBox" autocomplete="off" required>
-                            @error('UserEmail')
-                                <p class="error-message">{{ $message }}</p>
-                            @enderror
-
-                            @error('UserPassword')
-                                <p class="error-message">{{ $message }}</p>
-                            @enderror
-
-                            @error('login_failed')
-                                <p class="error-message">{{ $message }}</p>
-                            @enderror
                         </div>
                     </div>
                     <div>
