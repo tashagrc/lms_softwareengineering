@@ -17,7 +17,6 @@
 
 @section('container')
 
-<h1>Student Prespective</h1>
     <table class="border-0">
         <thead>
             <tr>
@@ -35,9 +34,9 @@
             @foreach($grades as $g)
                 <tr class="{{ $numeral % 2 == 0 ? 'table-row-odd' : '' }}">
                     <td>{{ $numeral }}</td>
-                    <td>{{ $g->answer->AnswerMainTopic}}</td>
-                    <td>{{ $g->FinishedDateTime}}</td>
-                    <td>{{$g->QuizScore}}</td>
+                    <td>{{ $g["QuizTitle"]}}</td>
+                    <td>{{ $g["FinishedDateTime"]}}</td>
+                    <td>{{$g["QuizScore"]}}</td>
                     <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
                 </tr>
                 @php
@@ -48,4 +47,5 @@
     </table>
 </body>
 </html>
+
 @endsection

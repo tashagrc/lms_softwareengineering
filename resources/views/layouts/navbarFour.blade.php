@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ReadRacoon</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/racoon.svg') }}">
     <link href="{{ asset('/css/navbarFour.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
@@ -23,12 +24,6 @@
                             <p>Dashboard</p>
                         </div>
                     </a>
-                    <a href="#" class="button-link">
-                        <div class="course">
-                            <img src="{{ asset('img/course.png') }}" alt="description of myimage">
-                            <p>Courses</p>
-                        </div>
-                    </a>
                     <a href="{{url('quizList/')}}" class="button-link">
                         <div class="quiz">
                             <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">
@@ -42,7 +37,7 @@
                         </div>
                     </a>
                 </div>
-                <a href="" class="button-link">
+                <a href="{{url('editProfile/')}}" class="button-link">
                     <div class="setting">
                         <img src="{{ asset('img/setting.png') }}" alt="description of myimage">
                         <p>Settings</p>
@@ -53,15 +48,15 @@
             @auth
                 <form action="/logout" method="post">
                     @csrf
-                    <button type="button" class="btn btn-outline-danger mt-2" style="width:120px">
+                    <button type="submit" class="btn btn-outline-danger mt-2" style="width:120px">
                         Logout
                     </button>
                 </form>
             @endauth
         </div>
         <div class="middle-bar" style="display: flex; flex-direction:column">
-            <div class="title d-flex justify-content-start" style="padding-top:20px">
-                <h3>@yield('title')</h3>
+            <div class="title" style="padding-top:20px">
+                <h3 class="">@yield('title')</h3>
             </div>
             <br/>
             <div class="container">
@@ -89,12 +84,14 @@
                 </div> --}}
             </div>
             <div class="card">
-                <div class="card-body">
-                    <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-sec" style="width: 40%"></div>
-                </div>
+                <a href="/achievement" style="text-decoration: none; color:black">
+                    <div class="card-body">
+                        <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-sec" style="width: 40%"></div>
+                    </div>
+                </a>
             </div>
 
             <div class="history">

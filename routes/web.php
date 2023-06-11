@@ -47,7 +47,6 @@ Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Contr
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 Route::get('/quizList', [QuizController::class, 'show']);
-Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 
