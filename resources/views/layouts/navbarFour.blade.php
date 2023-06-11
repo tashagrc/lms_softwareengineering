@@ -37,7 +37,7 @@
                         </div>
                     </a>
                 </div>
-                <a href="" class="button-link">
+                <a href="{{url('editProfile/')}}" class="button-link">
                     <div class="setting">
                         <img src="{{ asset('img/setting.png') }}" alt="description of myimage">
                         <p>Settings</p>
