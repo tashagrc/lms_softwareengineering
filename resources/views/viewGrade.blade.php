@@ -11,6 +11,10 @@
 </head>
 <body>
 
+@section('title')
+<b style="font-size: 30px">Grade</b>
+@endsection
+
 @section('container')
 <div class = "class-container">
     <h2> Class </h2>
@@ -19,7 +23,7 @@
             <button class="dropdown-button"> Select </button>
             <div class="dropdown-content">
                 @foreach ($classes as $class)
-                    <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name">{{ $class->ClassroomName }}</a>
+                    <a href="#" class="class-name">{{ $class->ClassroomName }}</a>
                 @endforeach
             </div>
         </div>
@@ -53,7 +57,7 @@
                     @endif
                 </td>
                 <td>{{$g->QuizScore}}</td>
-                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">...</a></td>
+                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
             </tr>
             @php
                 $numeral++;

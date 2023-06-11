@@ -35,6 +35,9 @@ class LoginController extends Controller
             Auth::loginUsingId($user->UserID);
             $request->session()->regenerate();
             if(Auth::check()){
+                if(Auth::user()->UserRole == 'Teacher'){
+                    return redirect()->intended('/createQuiz1');
+                }
                 return redirect()->intended('/dashboard');
             }
         } else {
