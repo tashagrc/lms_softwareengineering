@@ -31,9 +31,7 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+Route::get('/dashboard', [DashboardController::class, 'show'])->middleware('auth');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware(('guest'));
 Route::post('/register', [RegisterController::class, 'store']);
@@ -42,22 +40,12 @@ Route::get('/login', [LoginController::class, 'create'])->name('login')->middlew
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', [DashboardController::class, 'create'])->middleware('auth');
-
 
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
 Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
 Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
-
-// <<<<<<< master
-// Route::get('/navbarFour', function () {
-//     return view('layouts/navbarFour');
-// });
-
-// =======
-// >>>>>>> master
 Route::get('/quizList', [QuizController::class, 'show']);
 Route::get('/createQuiz', [QuizController::class, 'createQuiz']);
 

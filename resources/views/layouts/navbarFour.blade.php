@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ReadRacoon</title>
     <link href="{{ asset('/css/navbarFour.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
@@ -49,6 +49,13 @@
                     </div>
                 </a>
             </div>
+
+            @auth
+                <form action="/logout" method="post">
+                    @csrf
+                    <button>Logout</button>
+                </form>
+            @endauth
         </div>
         <div class="middle-bar" style="display: flex; flex-direction:column">
             <div class="title" style="padding-top:20px">
@@ -69,7 +76,7 @@
             </div>
             <div class="user-profile">
                 <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp">
-                <h1 class="nama">Hi, NAMA</h1>
+                <h1 class="nama">Hi, Michael Varian</h1>
                 <span class="badge text-dark">
                     <img src="{{ asset('img/star.png') }}" alt="description of myimage" class="star">
                     Warrior</span>
@@ -79,19 +86,13 @@
                     <p class="text-black">Warrior</p>
                 </div> --}}
             </div>
-            <div class="card m-2">
+            <div class="card m-2 border-0">
                 <div class="card-body">
-                <h6 style="font-size: 14px">Earn 1200 xp to level up</h6>
+                <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
                 </div>
             </div>
-            <div class="progress">
-                <div class="title-progress">
-                    <p>Earn 1200 xp to be a</p>
-                    <h5>Legend</h5>
-                </div>
-                <div class="progress-bar">
-                    <div id="bar"></div>
-                </div>
+            <div class="progress-container">
+                <div class="progress-sec" style="width: 40%"></div>
             </div>
             <div class="history">
                 <div class="title-history">
@@ -128,6 +129,8 @@
 
         </div>
     </div>
+
+
 
 </body>
 </html>
