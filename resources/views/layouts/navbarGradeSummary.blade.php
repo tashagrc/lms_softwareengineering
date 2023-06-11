@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RedRacoon</title>
-    <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
+    <title>Document</title>
+    <link href="{{ asset('/css/navbarTwoForStudent.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -52,22 +52,21 @@
         <div class="right-side">
         <div class="right-bar">
             <div class="title">
-                <h1><b>@yield('title')</b></h1>
+                <h1> Grade Summary </h1>
             </div>
             <div class="detail-row">
                 <a href=""><img src="{{ asset('img/notification.png') }}" alt="description of myimage" class="noti"></a>
                 <a href=""><img src="{{ asset('img/saved.png') }}" alt="description of myimage" class="save"></a>
                 <a href=""><img src="{{ asset('img/profile.png') }}" alt="description of myimage" class="pp"></a>
             </div>
-
         </div>
         <div class="container">
             @yield('container')
+            </div>
+            </div>
         </div>
-
-
-    </div>
-    </div>
+        </div>
+        </div>
 
 
     </div>

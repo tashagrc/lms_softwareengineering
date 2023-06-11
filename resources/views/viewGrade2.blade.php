@@ -1,15 +1,23 @@
+@extends('layouts.navbarTwoForStudent')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ReadRacoon</title>
     <link rel="stylesheet" href="/css/viewGradeStyle.css">
 </head>
 <body>
-<h1>Student Prespective</h1>
-    <table border="0">
+
+    @section('title')
+    <b style="font-size:30px">Quiz</b>
+    @endsection
+
+@section('container')
+
+    <table class="border-0">
         <thead>
             <tr>
                 <th>No</th>
@@ -26,10 +34,10 @@
             @foreach($grades as $g)
                 <tr class="{{ $numeral % 2 == 0 ? 'table-row-odd' : '' }}">
                     <td>{{ $numeral }}</td>
-                    <td>{{ $g->answer->AnswerMainTopic}}</td>
-                    <td>{{ $g->FinishedDateTime}}</td>
-                    <td>{{$g->QuizScore}}</td>
-                    <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">...</a></td>
+                    <td>{{ $g["QuizTitle"]}}</td>
+                    <td>{{ $g["FinishedDateTime"]}}</td>
+                    <td>{{$g["QuizScore"]}}</td>
+                    <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
                 </tr>
                 @php
                     $numeral++;
@@ -39,3 +47,5 @@
     </table>
 </body>
 </html>
+
+@endsection

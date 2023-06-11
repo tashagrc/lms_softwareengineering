@@ -8,7 +8,7 @@
     <link href="{{ asset('/css/navbarThree.css') }}" rel="stylesheet">
 </head>
 <body>
-    
+
     <div class="nav-row">
         <div class="left-bar">
             <div class="logo">
@@ -27,7 +27,7 @@
                             <img src="{{ asset('img/course.png') }}" alt="description of myimage">
                             <p>Courses</p>
                         </div>
-                    </a> 
+                    </a>
                     <a href="" class="button-link">
                         <div class="quiz">
                             <img src="{{ asset('img/quiz.png') }}" alt="description of myimage">

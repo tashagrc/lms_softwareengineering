@@ -1,4 +1,4 @@
-@extends('layouts.navbarCreateQuiz')
+@extends('layouts.navbarTwoForTeacher')
 
 <!DOCTYPE html>
 <html lang="en">

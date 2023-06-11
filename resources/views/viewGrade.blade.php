@@ -1,18 +1,39 @@
-@extends('layouts.navbarTwo')
+@extends('layouts.navbarTwoForTeacher')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Grade Summary </title>
     <link rel="stylesheet" href="/css/viewGradeStyle.css">
 </head>
 <body>
+
+@section('title')
+<b style="font-size: 30px">Grade</b>
+@endsection
+
 @section('container')
+<div class = "class-container">
+    <h2> Class </h2>
+    <div class ="dropdown-container">
+        <div class="dropdown">
+            <button class="dropdown-button"> Select </button>
+            <div class="dropdown-content">
+                @foreach ($classes as $class)
+                    <a href="#" class="class-name">{{ $class->ClassroomName }}</a>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <table class="table">
   <thead>
-    <tr>
+    <tr class = "titleColumn">
       <th scope="col">No</th>
       <th scope="col">Student Name</th>
       <th scope="col">Status</th>
@@ -20,7 +41,7 @@
       <th scope="col">Detail</th>
     </tr>
   </thead>
-  <tbody class="table-group-divider">  
+  <tbody class="table-group-divider">
         @php
             $numeral = 1;
         @endphp
@@ -36,7 +57,7 @@
                     @endif
                 </td>
                 <td>{{$g->QuizScore}}</td>
-                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">...</a></td>
+                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
             </tr>
             @php
                 $numeral++;
