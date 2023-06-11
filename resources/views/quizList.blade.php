@@ -24,28 +24,28 @@
     <div class="row">
       @foreach($quizzes as $q)
       <div class="col-md-4 card-container">
-        <div class="card mb-3">
+        <div class="card mb-3 p-3">
             <div class="card-body">
                 <div class="row">
                   <div class="col-8">
                     <h6 class="card-subtitle mb-2 text-muted">{{$q['ClassroomName']}} </h6>
-                    <h5 class="card-title mb-3">{{$q['QuizTitle']}}</h5>
+                    <h3 class="card-title text-gray fw-bold mb-3">{{$q['QuizTitle']}}</h3>
 
                     <div class="row align-items-center mb-2">
                         <div class="col-auto d-flex align-items-center">
-                          <img src="{{ asset('img/course.png') }}" alt="book icon" style="width:25px" class="mr-2">
-                        </div>
-                        <div class="col text-nowrap">
-                          <h6 class="card-subtitle mb-2 text-muted">{{$q['CourseName']}} </h6>
+                            <span class="badge text-dark d-flex">
+                                <img src="{{ asset('img/course.png') }}" alt="book icon" style="width:20px;height:20px"class="me-2">
+                                <h6 class="text-muted m-0">{{$q['CourseName']}} </h6>
+                            </span>
                         </div>
                       </div>
 
                       <div class="row align-items-center">
                         <div class="col-auto d-flex align-items-center">
-                          <img src="{{ asset('img/time.svg') }}" alt="time icon" class="mr-2">
-                        </div>
-                        <div class="col text-nowrap">
-                          <h6 class="card-subtitle mb-2 text-muted">{{$q['QuizDate']}} &#x2022; {{ \Carbon\Carbon::parse($q['QuizEnd'])->diffInMinutes(\Carbon\Carbon::parse($q['QuizStart'])) }} mins</h6>
+                            <span class="badge text-dark d-flex align-items-center">
+                                <img src="{{ asset('img/time.svg') }}" alt="time icon" class="me-2">
+                                <h6 class="card-subtitle text-muted">{{$q['QuizDate']}} &#x2022; {{ \Carbon\Carbon::parse($q['QuizEnd'])->diffInMinutes(\Carbon\Carbon::parse($q['QuizStart'])) }} mins</h6>
+                            </span>
                         </div>
                       </div>
 
@@ -54,7 +54,7 @@
                   <div class="col-4 text-right d-flex flex-column justify-content-center align-items-end">
                     @if($q['StatusPlayed'] == true)
                         <h6 class="card-subtitle mb-2 text-muted">Score</h6>
-                        <h5 class="card-subtitle mb-2 font-weight-bold">{{$q['QuizScore']}} </h5>
+                        <h1 class="card-subtitle mb-2 text-danger fw-bold">{{$q['QuizScore']}} </h1>
                     @else
                     <a href="{{url('quizList/quizDetails', $q->QuizID)}}" class="card-link">
                         <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">

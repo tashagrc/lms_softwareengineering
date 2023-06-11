@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ReadRacoon</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/racoon.svg') }}">
     <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -47,6 +48,14 @@
                         <p>Settings</p>
                     </div>
                 </a>
+                @auth
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-danger mt-2" style="width:120px">
+                            Logout
+                        </button>
+                    </form>
+                @endauth
             </div>
         </div>
         <div class="right-side">

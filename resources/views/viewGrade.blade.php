@@ -1,4 +1,4 @@
-@extends('layouts.navbarTwoForTeacher')
+@extends('layouts.navbarGradeSummary')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="/css/viewGradeStyle.css">
 </head>
 <body>
-
-@section('title')
-<b style="font-size:30px">Grade Summary</b>
-@endsection
 
 @section('container')
 <div class = "class-container">
@@ -57,7 +53,7 @@
                     @endif
                 </td>
                 <td>{{$g->QuizScore}}</td>
-                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
+                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">...</a></td>
             </tr>
             @php
                 $numeral++;
