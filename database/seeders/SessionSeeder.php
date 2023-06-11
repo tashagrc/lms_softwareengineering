@@ -17,7 +17,7 @@ class SessionSeeder extends Seeder
         DB::table('sessions')->insert([
             [
                 'SessionID' => 1,
-                'SessionTopic' => 'Simple Present Tense',
+                'SessionTopic' => 'American Revolution',
                 'SessionIntroduction' => 'Introduction to Session 1',
                 'CourseID' => 1,
                 'created_at' => now(),
@@ -25,7 +25,7 @@ class SessionSeeder extends Seeder
             ],
             [
                 'SessionID' => 2,
-                'SessionTopic' => 'World War 2',
+                'SessionTopic' => 'Industrial Revolution',
                 'SessionIntroduction' => 'Introduction to Session 2',
                 'CourseID' => 1,
                 'created_at' => now(),

@@ -28,7 +28,7 @@ class UserQuizSeeder extends Seeder
                 'UserID' => 1,
                 'QuizID' => 2,
                 'QuizScore' => 90,
-                'StatusPlayed' => true,
+                'StatusPlayed' => false,
                 'FinishedDateTime' => now(),
                 'created_at' => now(),
                 'updated_at' => now(),
