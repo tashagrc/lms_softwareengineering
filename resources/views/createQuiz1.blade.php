@@ -64,7 +64,7 @@
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
                         @foreach ($classes as $class)
-                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name">{{ $class->ClassroomName }}</a>
+                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name" name="dropdown">{{ $class->ClassroomName }}</a>
                         @endforeach
                     </div>
                 </div>

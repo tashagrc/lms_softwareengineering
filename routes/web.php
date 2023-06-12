@@ -41,10 +41,10 @@ Route::get('/login', [LoginController::class, 'create'])->name('login')->middlew
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
 Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
 Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
+Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 Route::get('/quizList', [QuizController::class, 'show']);
@@ -106,3 +106,4 @@ Route::get('navbar1', function() {
 Route::get('navbar4', function() {
     return view('layouts/navbarFour');
 });
+
