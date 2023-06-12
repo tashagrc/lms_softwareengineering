@@ -114,7 +114,7 @@
                 <div class = "end-to-end">
                     <h1> Questions </h1>
                     <div class="right">
-                        <p class="textTotalQuestion"> Total quetions: </p>
+                        {{-- <p class="textTotalQuestion"> Total quetions: </p> --}}
                         {{-- Isi Data --}}
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                             <p class="warna-pas">*</p>
                         </div>
                     </div>
-                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                    <input type="text" id="QuizQuestion1" name ="QuizName" class = "lengthBox" autocomplete="off" required>
                 </div>
                 <div class="spaceInput">
                     <div class="label">
@@ -144,7 +144,7 @@
                             <p class="warna-pas">*</p>
                         </div>
                     </div>
-                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                    <input type="text" id="QuizQuestion2" name ="QuizName" class = "lengthBox" autocomplete="off" required>
                 </div>
                 <div class="spaceInput">
                     <div class="label">
@@ -153,7 +153,7 @@
                             <p class="warna-pas">*</p>
                         </div>
                     </div>
-                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                    <input type="text" id="QuizQuestion3" name ="QuizName" class = "lengthBox" autocomplete="off" required>
                 </div>
             </div>
             </div>
