@@ -17,17 +17,16 @@
 
 @section('container')
 <div class = "class-container">
-    <h2> Class </h2>
-    <div class ="dropdown-container">
-        <div class="dropdown">
-            <button class="dropdown-button"> Select </button>
-            <div class="dropdown-content">
-                @foreach ($classes as $class)
-                    <a href="#" class="class-name">{{ $class->ClassroomName }}</a>
-                @endforeach
-            </div>
-        </div>
-    </div>
+    <form method="POST" action="{{ route('process.view.grade') }}">
+        @csrf
+        <label for="classroom">Select Classroom</label>
+        <select name="classroom" id="classroom">
+            @foreach ($classrooms as $classroom)
+                <option value="{{ $classroom->ClassroomID}}">{{ $classroom->ClassroomName }}</option>
+            @endforeach
+        </select>
+        <button type="submit" class="btn-filter">Filter</button>
+    </form>
 
 </div>
 
@@ -41,30 +40,35 @@
       <th scope="col">Detail</th>
     </tr>
   </thead>
+  @if (isset($students))
   <tbody class="table-group-divider">
         @php
             $numeral = 1;
         @endphp
-        @foreach($grades as $g)
+        @foreach($students as $student)
             <tr class="{{ $numeral % 2 == 0 ? 'table-row-odd' : '' }}">
                 <td>{{ $numeral }}</td>
-                <td>{{ $g->user->UserName}}</td>
+                <td>{{ $student->user->UserName}}</td>
                 <td>
-                    @if($g->StatusPlayed == 1)
-                        Submmited
-                    @elseif($g->StatusPlayed == 0)
+                    @if($student->StatusPlayed == 1)
+                        Submitted
+                    @elseif($student->StatusPlayed == 0)
                         Late
                     @endif
                 </td>
-                <td>{{$g->QuizScore}}</td>
-                <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
+                <td>{{$student->QuizScore}}</td>
+                <td><a href="{{ route('viewGradeDetail', ['id' => $student->UserId]) }}">View</a></td>
             </tr>
             @php
                 $numeral++;
             @endphp
         @endforeach
   </tbody>
+  @endif
 </table>
+
+</body>
+</html>
 @endsection
 
 <!DOCTYPE html>
