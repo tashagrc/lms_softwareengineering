@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
                 'UserID' => 2,
                 'UserName' => 'Jane Smith',
                 'UserEmail' => 'janesmith@example.com',
-                'UserPassword' => 'mikel123',
+                'UserPassword' => 'jane123',
                 'UserXP' => 100,
                 'UserDateJoined' => Carbon::now(),
                 'UserRole' => 'Student',

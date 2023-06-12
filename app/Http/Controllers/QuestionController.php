@@ -35,7 +35,7 @@ class QuestionController extends Controller
             Answer::create([
                 'AnswerContent' => $answer,
                 'QuizID' => $QuizID,
-                'UserID' => 1 // TODO
+                'UserID' => 1
             ]);
         }
         return redirect()->route('success.xp', ['QuizID' => $QuizID]);

@@ -93,6 +93,7 @@
     padding: 8px 25px;
     border-radius: 12px;
     cursor: pointer;
+    margin-right: 50px;
 }
 
 .content{
@@ -100,7 +101,22 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow-y: scroll;
+    height: 600px;
 }
+
+.content::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  .content::-webkit-scrollbar-thumb {
+    background-color: #C93B25;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+  .content::-webkit-scrollbar-track {
+    background-color: #FBF8F7; /* Background color of the scrollbar track */
+  }
 
 .content-wrap{
     margin-right: 200px;
@@ -108,7 +124,7 @@
 
 
 .content h1{
-    padding-top: 50px;
+    /* padding-top: 50px; */
     font-size: 24px;
     color: #404040;
 }
@@ -237,4 +253,22 @@
     border-color:#857979;
     border: 1px solid #857979;
     padding: 10px;
+}
+
+.end-to-end{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+    align-items: center;
+	align-content: stretch;
+    padding-top: 50px;
+}
+
+.textTotalQuestion{
+    font-size: 14px;
+}
+
+.title-margin{
+    margin-top: 50px;
 }

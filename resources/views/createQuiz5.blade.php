@@ -79,10 +79,27 @@
                 <div class="spaceInput">
                     <div class="label">
                         <div class="horizontal">
-                            <p> Add Questions </p>
+                            <p> Question 1 </p>
                             <p class="warna-pas">*</p>
                         </div>
-
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Question 2 </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Question 3 </p>
+                            <p class="warna-pas">*</p>
+                        </div>
                     </div>
                     <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
                 </div>

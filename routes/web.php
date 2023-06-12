@@ -15,6 +15,7 @@ use App\Http\Controllers\CreateQuiz2Controller;
 use App\Http\Controllers\CreateQuiz3Controller;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ViewGradeTeacherController;
+use App\Https\Controllers\CreateQuiz4Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,15 +58,17 @@ Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionControlle
 
 Route::get('/achievement', [AchievementController::class, 'show']);
 
-Route::get('/grade', function () {
-    return view('viewGrade');
-});
-
-Route::get('/grade', [GradeController::class, 'index']);
+// Route::get('/grade', function () {
+//     return view('viewGrade');
+// });
 
 Route::get('/viewGradeDetail', function () {
     return view('viewGradeDetail');
 })->name('viewGradeDetail');
+
+Route::get('/grade', [GradeController::class, 'index']);
+Route::get('/grade', [GradeController::class, 'showViewGrade'])->name('view.grade');
+Route::post('/grade', [GradeController::class, 'processViewGrade'])->name('process.view.grade');
 
 Route::get('/grade2', function () {
     return view('viewGrade2');

@@ -59,7 +59,7 @@
         </div>
         <div class="content">
             <div class="content-wrap">
-                <h1> Add quiz detail </h1>
+                <h1 class="title-margin"> Add quiz detail </h1>
                 <div class="spaceInput">
                     <div class="label">
                         <div class="horizontal">
@@ -110,11 +110,57 @@
                     </div>
                 </div>
             </div>
+            <div class="content-wrap">
+                <div class = "end-to-end">
+                    <h1> Questions </h1>
+                    <div class="right">
+                        <p class="textTotalQuestion"> Total quetions: </p>
+                        {{-- Isi Data --}}
+                    </div>
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Article </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+                    </div>
+                    <textarea id="QuizArticle" name="QuizArticle" rows="6" class="lengthBox2"></textarea>
+
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Question 1 </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Question 2 </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                </div>
+                <div class="spaceInput">
+                    <div class="label">
+                        <div class="horizontal">
+                            <p> Question 3 </p>
+                            <p class="warna-pas">*</p>
+                        </div>
+                    </div>
+                    <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                </div>
+            </div>
             </div>
         </div>
         <div class="action-button">
-            {{-- <button class="savecontinue"><a href="{{ route('createQuiz2', ['clickedValue' => $class['ClassroomID']]) }}">{{ $class['ClassroomName'] }}</a>
-            </button> --}}
+            <button class="savecontinue">Save & Continue
+            </button>
         </div>
     </div>
 

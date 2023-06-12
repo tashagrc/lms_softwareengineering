@@ -15,4 +15,22 @@ class GradeController extends Controller
 
         return view('viewGrade', compact('classes', 'grades'));
     }
+
+    public function showViewGrade()
+    {
+        $classrooms = Classroom::all();
+        return view('viewGrade', compact('classrooms'));
+    }
+
+    public function processViewGrade(Request $request)
+    {
+        $classroomID = $request->input('classroom');
+        $students = UserQuiz::whereHas('user', function ($query) use ($classroomID) {
+            $query->where('ClassroomID', $classroomID);
+        })->get();
+
+        $classrooms = Classroom::all();
+
+        return view('viewGrade', compact('classrooms', 'students'));
+    }
 }
