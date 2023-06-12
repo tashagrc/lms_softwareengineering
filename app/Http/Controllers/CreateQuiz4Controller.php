@@ -25,6 +25,6 @@ class CreateQuiz4Controller extends Controller
         $quiz->save();
 
         // Redirect the user to the next step or page
-        return Redirect::route('nextStep');
+        return Redirect::route('createQuiz5', $quizID);
     }
 }
