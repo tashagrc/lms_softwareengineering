@@ -9,12 +9,6 @@ use App\Models\Classroom;
 
 class GradeController extends Controller
 {
-    // public function index()
-    // {
-    //     $grades = UserQuiz::with('user')->get();
-    //     return view('viewGrade', compact('grades'));
-    // }
-
     public function index(Request $request){
         $classes = Classroom::all();
         $grades = UserQuiz::with('user')->get();

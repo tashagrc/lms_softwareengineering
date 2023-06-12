@@ -71,5 +71,4 @@
 @endsection
 </body>
 </html>
-@endsection
 
