@@ -15,6 +15,7 @@ use App\Http\Controllers\CreateQuiz2Controller;
 use App\Http\Controllers\CreateQuiz3Controller;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ViewGradeTeacherController;
+use App\Https\Controllers\CreateQuiz4Controller;
 
 /*
 |--------------------------------------------------------------------------
