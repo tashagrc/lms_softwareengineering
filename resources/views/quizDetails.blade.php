@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-md-8">
           <div class="card border-0 bg-card" style="width: 18rem;">
-            <div class="card-body" style="width:50vw">
+            <div class="card-body1" style="width:50vw">
               <h5 class="text-prepare">{{$quiz['QuizPrepare']}}</h5>
             </div>
           </div>

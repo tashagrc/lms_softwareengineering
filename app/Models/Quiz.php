@@ -34,6 +34,10 @@ class Quiz extends Model
         return $this->belongsTo(Quiz::class);
     }
 
+    public function sessions(){
+        return $this->belongsTo(Session::class);
+    }
+
     protected $primaryKey = 'QuizID';
 
 }

@@ -30,7 +30,7 @@
                             <p>Quiz</p>
                         </div>
                     </a>
-                    <a href="{{url('grade/')}}" class="button-link">
+                    <a href="{{url('grade2/')}}" class="button-link">
                         <div class="grade">
                             <img src="{{ asset('img/grade.png') }}" alt="description of myimage">
                             <p>Grade</p>
@@ -97,7 +97,7 @@
             <div class="history">
                 <div class="title-history">
                     <h1>Quizzes History</h1>
-                    <a href="">View all</a>
+                    <a href="/grade2">View all</a>
                 </div>
                 <div class="history-detail">
                     {{-- @foreach($quizzes as $q)
@@ -122,7 +122,7 @@
                         </div>
                     </a>
                     @endforeach --}}
-                    <a href="" class="button-link">
+                    <a href="/grade2" class="button-link">
                         <div class="history-detail-row">
                             <div class="history-detail-col">
                                 <div class="title-detail">

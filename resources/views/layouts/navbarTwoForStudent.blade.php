@@ -7,6 +7,8 @@
     <title>ReadRacoon</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('img/racoon.svg') }}">
     <link href="{{ asset('/css/navbarTwo.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet"> --}}
+
 </head>
 <body>
 
@@ -45,7 +47,7 @@
                 @auth
                 <form action="/logout" method="post">
                     @csrf
-                    <button type="submit" class="btn btn-outline-danger mt-2" style="width:120px">
+                    <button type="submit" class="btn-logout" style="width:120px">
                         Logout
                     </button>
                 </form>

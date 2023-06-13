@@ -63,6 +63,7 @@ nav {
 	align-content: stretch;
     margin-top: 100px;
     margin-bottom: 100px;
+    margin-left: 100px;
   }
 
   .from-pas{
@@ -70,17 +71,6 @@ nav {
     /* justify-content: center; */
     /* margin-left: 10%; */
     margin-top: 0px;
-  }
-
-  .col-left{
-    width: 50%;
-    /* text-align: center; */
-    margin-left: 12%;
-  }
-
-  .col-right{
-    width: 50%;
-    margin-right: 50px;
   }
 
 .regis:hover{
@@ -160,7 +150,15 @@ nav {
 
 .sbtRegis:hover{
     cursor: pointer;
-}
+    background-color: white;
+    border: 1px solid #C93B25;
+    color: #C93B25;
+    transition: 0.2s;
+  }
+
+  .sbtRegis:hover a{
+    color: #C93B25;
+  }
 
 #valName{
     /* display: none; */
