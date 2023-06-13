@@ -80,7 +80,7 @@
                         <br/>
                     </div>
                       <div class="card-body">
-                        <a href="#" class="card-link-unstyled text-danger">See more ></a>
+                        <a href="https://students.unimelb.edu.au/academic-skills/resources/essay-writing/six-top-tips-for-writing-a-great-essay" class="card-link-unstyled text-danger">See more ></a>
                       </div>
                     </div>
                     <div class="card m-2" style="width: 18rem;">
@@ -90,7 +90,7 @@
                         <p class="card-text">Researchers have introduced a game-changing algorithm that enables computers to count at unprecedented speeds.</p>
                       </div>
                       <div class="card-body">
-                        <a href="#" class="card-link-unstyled text-danger">See more ></a>
+                        <a href="https://www.tutorialspoint.com/swift-program-to-count-number-of-digits-in-an-integer" class="card-link-unstyled text-danger">See more ></a>
                       </div>
                     </div>
                   </div>

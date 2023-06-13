@@ -54,9 +54,9 @@
                 </form>
             @endauth
         </div>
-        <div class="middle-bar" style="display: flex; flex-direction:column">
-            <div class="title" style="padding-top:20px">
-                <h3 class="">@yield('title')</h3>
+        <div class="middle-bar" style="display: flex; flex-direction:column; ;">
+            <div class="title" style="padding-top: 30px; width: 100%;">
+                <h3 class="" style="margin-bottom: 0px">@yield('title')</h3>
             </div>
             <br/>
             <div class="container">
