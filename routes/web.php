@@ -41,10 +41,27 @@ Route::get('/login', [LoginController::class, 'create'])->name('login')->middlew
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
+// Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
+// Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse'])->name('createQuiz2');
+// Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions'])->name('createQuiz3');
+// Route::get('/createQuiz1/createQuiz2/createQuiz3/createQuiz4', [CreateQuiz4Controller::class, 'index'])->name('createQuiz4');
+// // Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
+
+// Route::post('/createQuiz1', [CreateQuiz1Controller::class, 'storePage1'])->name('storePage1');
+// Route::post('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'storePage2'])->name('storePage2');
+// Route::post('/createQuiz1/createQuiz2/createQuiz3/{courseId}', [CreateQuiz3Controller::class, 'storePage3'])->name('storePage3');
+// Route::match(['get', 'post'], '/createQuiz1/createQuiz2/createQuiz3/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo'])->name('createQuiz4');
+
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
-Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
-Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
-Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
+Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse'])->name('createQuiz2');
+Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions'])->name('createQuiz3');
+Route::get('/createQuiz1/createQuiz2/createQuiz3/createQuiz4', [CreateQuiz4Controller::class, 'index'])->name('createQuiz4');
+
+Route::post('/createQuiz1', [CreateQuiz1Controller::class, 'storePage1'])->name('storePage1');
+Route::post('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'storePage2'])->name('storePage2');
+Route::post('/createQuiz1/createQuiz2/createQuiz3/{courseId}', [CreateQuiz3Controller::class, 'storePage3'])->name('storePage3');
+Route::post('/createQuiz1/createQuiz2/createQuiz3/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo'])->name('storeQuizInfo');
+
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 Route::get('/quizList', [QuizController::class, 'show']);

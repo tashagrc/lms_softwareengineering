@@ -60,6 +60,7 @@
         <div class="content">
             <h1 class="content-title">Select subject</h1>
             <div class="content">
+                {{-- <form action="{{ route('storePage2') }}" method="POST" onsubmit="return confirm('Are you want to create this course?');"> --}}
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
@@ -68,6 +69,7 @@
                         @endforeach
                     </div>
                 </div>
+            {{-- </form> --}}
             </div>
         </div>
             {{-- <div class="action-button">

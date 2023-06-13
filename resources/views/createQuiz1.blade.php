@@ -60,14 +60,17 @@
         <div class="content">
             <h1 class="content-title">Select class</h1>
             <div class="content">
+                {{-- <form action="{{ route('storePage1') }}" method="POST" onsubmit="return confirm('Are you sure to select this class?');"> --}}
                 <div class="dropdown">
                     <button class="dropdown-button">Select</button>
                     <div class="dropdown-content">
                         @foreach ($classes as $class)
-                            <a href="{{ url('createQuiz1/createQuiz2', $class->ClassroomID) }}" class="class-name" name="dropdown">{{ $class->ClassroomName }}</a>
+                            <a href="{{-- {{ url('createQuiz1/createQuiz2', $class->ClassroomID) }} --}}" class="class-name" name="dropdown">{{ $class->ClassroomName }}</a>
                         @endforeach
                     </div>
                 </div>
+            {{-- </form> --}}
+
             </div>
         </div>
         {{-- <div class="action-button">
