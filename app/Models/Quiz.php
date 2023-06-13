@@ -39,6 +39,18 @@ class Quiz extends Model
     }
 
     protected $primaryKey = 'QuizID';
+    protected $fillable = [
+        'QuizTitle',
+        'QuizArticle',
+        'QuizDate',
+        'QuizStart',
+        'QuizEnd',
+        'QuizPrepare',
+        'SessionID',
+        'CourseID',
+        'ClassroomID',
+    ];
+
 
 }
 

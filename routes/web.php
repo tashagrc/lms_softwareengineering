@@ -13,9 +13,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CreateQuiz1Controller;
 use App\Http\Controllers\CreateQuiz2Controller;
 use App\Http\Controllers\CreateQuiz3Controller;
+use App\Http\Controllers\CreateQuiz4Controller;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ViewGradeTeacherController;
-use App\Https\Controllers\CreateQuiz4Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +44,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
 Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
 Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
-Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
+// Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
+Route::get('/createQuiz4', [CreateQuiz4Controller::class, 'index']);
+Route::match(['post'], '/createQuiz4', [CreateQuiz4Controller::class, 'saveQuiz'])->name('saveQuiz');
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 Route::get('/quizList', [QuizController::class, 'show']);
@@ -79,9 +81,9 @@ Route::get('/grade2', [Grade2Controller::class, 'index']);
 
 Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
 
-Route::get('/createQuiz4', function () {
-    return view('createQuiz4');
-});
+// Route::get('/createQuiz4', function () {
+//     return view('createQuiz4');
+// });
 
 Route::get('/createQuiz5', function () {
     return view('createQuiz5');

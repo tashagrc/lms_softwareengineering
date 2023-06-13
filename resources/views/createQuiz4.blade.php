@@ -57,7 +57,8 @@
                 </div>
             </div> --}}
         </div>
-        <form action="" method="POST" onsubmit="return confirm('Are you want to create this quiz?');">
+        <form action="{{ route('saveQuiz') }}" method="POST" onsubmit="return confirm('Are you want to create this quiz?');">
+            @csrf
             <div class="content">
                 <div class="content-wrap">
                     <h1 class="title-margin"> Add quiz detail </h1>
@@ -67,7 +68,7 @@
                                 <p> Quiz Name </p>
                                 <p class="warna-pas">*</p>
                             </div>
-    
+
                         </div>
                         <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
                     </div>
@@ -76,7 +77,7 @@
                             <div class="horizontal">
                                 <p> Informations </p>
                             </div>
-    
+
                         </div>
                         <textarea id="QuizInformations" name="QuizInformations" rows="6" class="lengthBox2"></textarea>
                     </div>
@@ -87,7 +88,7 @@
                                     <div class="horizontal">
                                         <p> Date </p>
                                     </div>
-    
+
                                 </div>
                                 <input type="date" id="QuizDate" name="QuizDate" class="lengthBox3">
                             </div>
@@ -96,7 +97,7 @@
                                     <div class="horizontal">
                                         <p> Start Time </p>
                                     </div>
-    
+
                                 </div>
                                 <input type="time" id="QuizStart" name="QuizStart" class="lengthBox3">
                             </div>
@@ -127,7 +128,7 @@
                             </div>
                         </div>
                         <textarea id="QuizArticle" name="QuizArticle" rows="6" class="lengthBox2"></textarea>
-    
+
                     </div>
                     <div class="spaceInput">
                         <div class="label">
@@ -160,7 +161,7 @@
                 </div>
             </div>
             <div class="action-button">
-                <button class="savecontinue" type="submit"><a href="/createQuiz1">Save & Continue</a></button>
+                <button class="savecontinue" type="submit">Save & Continue</button>
             </div>
         </form>
     </div>
