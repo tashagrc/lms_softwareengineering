@@ -31,7 +31,7 @@
                             </span>
                         </div>
                         <div class="action">
-                            <a href="#" class="card-link">
+                            <a href="quizList/quizDetails/1" class="card-link">
                                 <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
                             </a>
                         </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="card m-2" style="width: 18rem;">
                         <div class="card-body m-2">
-                        <h5 class="card-title fs-5 pb-4">English Literacy</h5>
+                        <h5 class="card-title fs-5 pb-4">Chemistry Literacy</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Class Progress</h6>
                         <div class="progress-container w-100">
                             <div class="progress-sec" style="width: 80%"></div>

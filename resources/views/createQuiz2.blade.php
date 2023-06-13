@@ -41,9 +41,9 @@
                     <p class="spacing" id="number4">4</p>
                     <p class="spacing" id="desc4">Information</p>
                 </div>
-                <p class="spacing" id="arrow">></p>
+                {{-- <p class="spacing" id="arrow">></p> --}}
             </div>
-            <div class="step-layout">
+            {{-- <div class="step-layout">
                 <div href="" class="step-layout-button" id="fifth-step">
                     <p class="spacing" id="number5">5</p>
                     <p class="spacing" id="desc5">Questions</p>
@@ -55,7 +55,7 @@
                     <p class="spacing" id="number6">6</p>
                     <p class="spacing" id="desc6">Upload</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="content">
             <h1 class="content-title">Select subject</h1>

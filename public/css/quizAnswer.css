@@ -71,3 +71,20 @@
     margin-top: 5vh;
     margin-bottom: 10vh;
 }
+
+.card{
+    margin: 20px 0px;
+}
+
+.col-md-8{
+    padding-left: 0px;
+}
+
+.card-body1{
+    padding-left: 14px;
+}
+
+.col-md-4 img:hover{
+    opacity: 70%;
+    transition: 0.3s;
+}
