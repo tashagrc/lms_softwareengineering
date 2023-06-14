@@ -14,12 +14,10 @@ class CreateQuiz1Controller extends Controller
             'classes' => Classroom::all()
         ]);
     }
+    // public function storePage1(Request $request){
+    //     $inputValue = $request->input('dropdown'); // Replace 'dropdown' with the name of your dropdown input
+    //     session(['page1_input' => $inputValue]);
 
-
-    public function storePage1(Request $request){
-        $inputValue = $request->input('dropdown'); // Replace 'dropdown' with the name of your dropdown input
-        session(['classes' => $inputValue]);
-
-        return redirect()->route('createQuiz2');
-    }
+    //     return redirect()->route('cq2');
+    // }
 }

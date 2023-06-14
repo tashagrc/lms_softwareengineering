@@ -42,9 +42,16 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
+// Route::post('/createQuiz1', [CreateQuiz1Controller::class, 'storePage1'])->name('cq1');
+
 Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
+// Route::post('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'storePage2'])->name('cq2');
+
 Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
+// Route::post('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'storePage3'])->name('cq3');
+
 Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
+// Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storePage3'])->name('cq4');
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
 Route::get('/quizList', [QuizController::class, 'show']);
