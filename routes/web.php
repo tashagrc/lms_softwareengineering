@@ -73,7 +73,7 @@ Route::get('/viewGradeDetail', function () {
     return view('viewGradeDetail');
 })->name('viewGradeDetail');
 
-Route::get('/grade', [GradeController::class, 'index']);
+Route::get('/grades', [YourController::class, 'index'])->name('grades.index');
 Route::get('/grade', [GradeController::class, 'showViewGrade'])->name('view.grade');
 Route::post('/grade', [GradeController::class, 'processViewGrade'])->name('process.view.grade');
 
