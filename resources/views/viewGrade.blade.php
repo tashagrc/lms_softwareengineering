@@ -16,32 +16,33 @@
 @endsection
 
 @section('container')
-<div class = "class-container">
-    <form method="POST" action="{{ route('process.view.grade') }}">
+<div class = "filterSection">
+    <form class = "class-container" method="POST" action="{{ route('process.view.grade') }}">
         @csrf
-        <label for="classroom">Select Classroom</label>
-        <select name="classroom" id="classroom">
-            @foreach ($classrooms as $classroom)
-                <option value="{{ $classroom->ClassroomID}}">{{ $classroom->ClassroomName }}</option>
-            @endforeach
-        </select>
+        <label class="lblClass" for="classroom">Class</label>
+        <div class = "ddButton">
+            <select class="ddClass" name="classroom" id="classroom">
+                @foreach ($classrooms as $classroom)
+                    <option value="{{ $classroom->ClassroomID}}">{{ $classroom->ClassroomName }}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="submit" class="btn-filter">Filter</button>
     </form>
-
 </div>
 
 <table class="table">
-  <thead>
-    <tr class = "titleColumn">
-      <th scope="col">No</th>
-      <th scope="col">Student Name</th>
-      <th scope="col">Status</th>
-      <th scope="col">Scores</th>
-      <th scope="col">Detail</th>
-    </tr>
-  </thead>
-  @if (isset($students))
-  <tbody class="table-group-divider">
+    <thead>
+        <tr class = "titleColumn">
+        <th scope="col">No</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Scores</th>
+        <th scope="col">Detail</th>
+        </tr>
+    </thead>
+    @if (isset($students))
+    <tbody class="table-group-divider">
         @php
             $numeral = 1;
         @endphp
@@ -63,15 +64,15 @@
                 $numeral++;
             @endphp
         @endforeach
-  </tbody>
-  @endif
+    </tbody>
+    @endif
 </table>
 
 </body>
 </html>
 @endsection
 
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -102,7 +103,7 @@
         </tr>
     </thead>
 @if (isset($students))
-    <tbody class="table-group-divider">  
+    <tbody class="table-group-divider">
             @php
                 $numeral = 1;
             @endphp
@@ -128,4 +129,4 @@
     </table>
 @endif
 </body>
-</html>
+</html> --}}

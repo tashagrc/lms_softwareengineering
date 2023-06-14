@@ -17,23 +17,29 @@ class CreateQuiz2Controller extends Controller
     //         ->join('classrooms', 'classrooms.ClassroomID', '=', 'classroom_courses.ClassroomID')
     //         ->where('classroom_courses.ClassroomID', $ClassId)
     //         ->get(['courses.CourseName']);
-            
+
     //     return view('createQuiz2', [
     //         'courses' => $courses
     //     ]);
     // }
 
-    function ClassCourse($ClassId) {
+    public function ClassCourse($ClassId) {
         $courses = ClassroomCourse::join('courses', 'courses.CourseID', '=', 'classroom_courses.CourseID')
             ->join('classrooms', 'classrooms.ClassroomID', '=', 'classroom_courses.ClassroomID')
             ->where('classroom_courses.ClassroomID', $ClassId)
             ->get(['courses.CourseID', 'courses.CourseName']); // Include the CourseID
-    
+
         return view('createQuiz2', [
             'courses' => $courses
         ]);
     }
-    
+
+    // public function storePage2(Request $request){
+    //     $inputValue = $request->input('dropdown'); // Replace 'dropdown' with the name of your dropdown input
+    //     session(['page2_input' => $inputValue]);
+
+    //     return redirect()->route('cq3');
+    // }
 }
 
 
