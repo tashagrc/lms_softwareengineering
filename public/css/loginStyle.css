@@ -62,6 +62,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     margin-top: 140px;
+    margin-left: 100px;
   }
 
   .from-pas{
@@ -69,17 +70,6 @@ nav {
     /* justify-content: center; */
     /* margin-left: 10%; */
     margin-top: 0px;
-  }
-
-  .col-left{
-    width: 50%;
-    /* text-align: center; */
-    margin-left: 12%;
-  }
-
-  .col-right{
-    width: 50%;
-    margin-right: 50px;
   }
 
 .regis:hover{
@@ -141,6 +131,7 @@ nav {
 
 .lblChangePassword{
     color:#C93B25;
+    font-size: 15px;
 }
 
 .lblChangePassword:hover{
@@ -163,7 +154,15 @@ nav {
 
 .sbtLogin:hover{
     cursor: pointer;
-}
+    background-color: white;
+    border: 1px solid #C93B25;
+    color: #C93B25;
+    transition: 0.2s;
+  }
+
+  .sbtLogin:hover a{
+    color: #C93B25;
+  }
 
 #valEmail{
     /* display: none; */

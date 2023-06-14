@@ -33,6 +33,7 @@
 }
 
 .save-ans {
+    cursor: pointer;
     margin-top: 10vh;
     background-color: #C93B25;
     color: white;
@@ -71,3 +72,40 @@
     margin-top: 5vh;
     margin-bottom: 10vh;
 }
+
+.card{
+    margin: 20px 0px;
+}
+
+.col-md-8{
+    padding-left: 0px;
+}
+
+.card-body1{
+    padding-left: 14px;
+}
+
+.col-md-4 img:hover{
+    opacity: 70%;
+    transition: 0.3s;
+}
+
+.container{
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.container::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: #C93B25;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+  .container::-webkit-scrollbar-track {
+    background-color: #FBF8F7; /* Background color of the scrollbar track */
+  }
+
+  

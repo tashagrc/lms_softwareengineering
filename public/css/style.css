@@ -5,9 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.combineButton{
-
-}
 
 a{
     text-decoration: none;
@@ -54,7 +51,6 @@ nav {
 .regis a{
     width: 90px;
     height: 35px;
-    background-color: #404040;
     border-radius: 100px;
     color: white;
     font-family: 'Poppins';
@@ -62,6 +58,18 @@ nav {
     font-weight: 600;
     font-size: 15px;
     border: none;
+}
+
+.regis:hover{
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #404040;
+  color: #404040;
+  transition: 0.3s;
+}
+
+.regis:hover a{
+  color: #404040;
 }
 
   .login{
@@ -80,7 +88,6 @@ nav {
 .login a{
     width: 90px;
     height: 35px;
-    background-color: #C93B25;
     border-radius: 100px;
     color: white;
     font-family: 'Poppins';
@@ -88,6 +95,18 @@ nav {
     font-weight: 600;
     font-size: 15px;
     border: none;
+}
+
+.login:hover{
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #C93B25;
+  color: #C93B25;
+  transition: 0.3s;
+}
+
+.login:hover a{
+  color: #C93B25;
 }
 
 .regis:hover{
@@ -148,15 +167,20 @@ nav {
   }
 
   .read-now a{
-    background-color: #C93B25;
     border-radius: 18px;
     color: white;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    border: none;
-    margin-top: 50px;
+  }
+
+  .read-now:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #C93B25;
+    color: #C93B25;
+    transition: 0.2s;
+  }
+
+  .read-now:hover a{
+    color: #C93B25;
   }
 
   .col-right{

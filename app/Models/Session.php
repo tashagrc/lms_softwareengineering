@@ -18,4 +18,8 @@ class Session extends Model
     {
         return $this->belongsTo(Course::class, 'CourseID');
     }
+
+    public function quizzes(){
+        return $this->belongsTo(Quiz::class);
+    }
 }

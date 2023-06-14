@@ -31,7 +31,7 @@
                             </span>
                         </div>
                         <div class="action">
-                            <a href="#" class="card-link">
+                            <a href="quizList/quizDetails/1" class="card-link">
                                 <img src="{{ asset('img/play_button.png') }}" alt="play icon" style="width:50px">
                             </a>
                         </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="card m-2" style="width: 18rem;">
                         <div class="card-body m-2">
-                        <h5 class="card-title fs-5 pb-4">English Literacy</h5>
+                        <h5 class="card-title fs-5 pb-4">Chemistry Literacy</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Class Progress</h6>
                         <div class="progress-container w-100">
                             <div class="progress-sec" style="width: 80%"></div>
@@ -80,7 +80,7 @@
                         <br/>
                     </div>
                       <div class="card-body">
-                        <a href="#" class="card-link-unstyled text-danger">See more ></a>
+                        <a href="https://students.unimelb.edu.au/academic-skills/resources/essay-writing/six-top-tips-for-writing-a-great-essay" class="card-link-unstyled text-danger">See more ></a>
                       </div>
                     </div>
                     <div class="card m-2" style="width: 18rem;">
@@ -90,7 +90,7 @@
                         <p class="card-text">Researchers have introduced a game-changing algorithm that enables computers to count at unprecedented speeds.</p>
                       </div>
                       <div class="card-body">
-                        <a href="#" class="card-link-unstyled text-danger">See more ></a>
+                        <a href="https://www.tutorialspoint.com/swift-program-to-count-number-of-digits-in-an-integer" class="card-link-unstyled text-danger">See more ></a>
                       </div>
                     </div>
                   </div>

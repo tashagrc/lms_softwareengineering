@@ -166,3 +166,35 @@ body{
 .content-middle{
     display: flex;
 }
+
+.pages-bar .dashboard p,
+.pages-bar .quiz p,
+.pages-bar .grade p,
+.pages-bar .setting p {
+    font-weight: 600;
+}
+
+.pages-bar .dashboard:hover p,
+.pages-bar .quiz:hover p,
+.pages-bar .grade:hover p,
+.pages-bar .setting:hover p {
+    color: #C93B25;
+}
+
+.btn-logout{
+    background-color: white;
+    border: 1px solid #C93B25;
+    color: #C93B25;
+    padding: 8px 0px;
+    border-radius: 10px;
+    padding-left:25px;
+    padding-right:25px;
+}
+
+.btn-logout:hover{
+  cursor: pointer;
+  background-color: #C93B25;
+  color: white;
+  transition: 0.3s;
+}
+

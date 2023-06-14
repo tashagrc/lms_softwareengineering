@@ -30,7 +30,7 @@
                             <p>Quiz</p>
                         </div>
                     </a>
-                    <a href="{{url('grade/')}}" class="button-link">
+                    <a href="{{url('grade2/')}}" class="button-link">
                         <div class="grade">
                             <img src="{{ asset('img/grade.png') }}" alt="description of myimage">
                             <p>Grade</p>
@@ -54,9 +54,9 @@
                 </form>
             @endauth
         </div>
-        <div class="middle-bar" style="display: flex; flex-direction:column">
-            <div class="title" style="padding-top:20px">
-                <h3 class="">@yield('title')</h3>
+        <div class="middle-bar" style="display: flex; flex-direction:column; ;">
+            <div class="title" style="padding-top: 30px; width: 100%;">
+                <h3 class="" style="margin-bottom: 0px">@yield('title')</h3>
             </div>
             <br/>
             <div class="container">
@@ -86,10 +86,10 @@
             <div class="card">
                 <a href="/achievement" style="text-decoration: none; color:black">
                     <div class="card-body">
-                        <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
+                        <h6 style="font-size: 14px">Earn {{2000- $userXP }} xp to be a Legend</h6>
                     </div>
                     <div class="progress-container">
-                        <div class="progress-sec" style="width: 40%"></div>
+                        <div class="progress-sec" role="progressbar" style="width: {{ ($userXP / 2000) * 100 }}%;" aria-valuenow="{{ $userXP }}" aria-valuemin="0" aria-valuemax="2000"></div>
                     </div>
                 </a>
             </div>
@@ -97,7 +97,7 @@
             <div class="history">
                 <div class="title-history">
                     <h1>Quizzes History</h1>
-                    <a href="">View all</a>
+                    <a href="/grade2">View all</a>
                 </div>
                 <div class="history-detail">
                     {{-- @foreach($quizzes as $q)
@@ -122,7 +122,7 @@
                         </div>
                     </a>
                     @endforeach --}}
-                    <a href="" class="button-link">
+                    <a href="/grade2" class="button-link">
                         <div class="history-detail-row">
                             <div class="history-detail-col">
                                 <div class="title-detail">
