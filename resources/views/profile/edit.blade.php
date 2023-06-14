@@ -1,26 +1,30 @@
-<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
 @extends('layouts.navbarTwoForStudent')
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/achievement.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 
 @section('container')
 <div class="container mx-auto">
     <div class="row" style="width: 70vw">
         <div class="col" >
-            <div class="card w-100 mb-3">
-                <div class="card-body d-flex p-4">
-                    <img src="{{ asset('img/profile.jpg') }}" alt="description of myimage" class="pp">
+            <div class="card w-100 mb-3 card-container2">
+                <div class="card-body d-flex pd-2">
+                    <img src="{{ asset('img/profile.svg') }}" alt="description of myimage" class="pp" style="width:10%; height:10%">
                     <div class="details d-flex flex-column mx-4">
                         <div class="words d-flex pe-4">
                             <h5 class="card-title fs-2 fw-bold text-danger">{{$users["UserName"]}}</h5>
-                            <span class="badge text-dark">
+                            <span class="badge text-dark d-flex align-items-center" style="background-color: #FEF7F7;">
                                 <img src="{{ asset('img/star.svg') }}" alt="description of myimage" class="star" style="width:25px">
-                                Warrior</span>
+                                <span class="ms-2" style="font-size:15px">Warrior</span>
+                            </span>
+
                         </div>
-                        <p class="card-text">Earn 1200xp to be a legend</p>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar" style="width: 0%"></div>
-                          </div>
+                        <p class="card-text">Earn {{2000- $userXP}} to be a Legend</p>
                     </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-sec" role="progressbar" style="width: {{ ($userXP / 2000) * 100 }}%;" aria-valuenow="{{ $userXP }}" aria-valuemin="0" aria-valuemax="2000"></div>
                 </div>
             </div>
             <div class="sections d-flex">

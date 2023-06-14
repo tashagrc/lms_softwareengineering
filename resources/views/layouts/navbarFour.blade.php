@@ -86,10 +86,10 @@
             <div class="card">
                 <a href="/achievement" style="text-decoration: none; color:black">
                     <div class="card-body">
-                        <h6 style="font-size: 14px">Earn 1200 xp to be a Legend</h6>
+                        <h6 style="font-size: 14px">Earn {{2000- $userXP }} xp to be a Legend</h6>
                     </div>
                     <div class="progress-container">
-                        <div class="progress-sec" style="width: 40%"></div>
+                        <div class="progress-sec" role="progressbar" style="width: {{ ($userXP / 2000) * 100 }}%;" aria-valuenow="{{ $userXP }}" aria-valuemin="0" aria-valuemax="2000"></div>
                     </div>
                 </a>
             </div>

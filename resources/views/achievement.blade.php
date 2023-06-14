@@ -32,11 +32,12 @@
                                 </span>
 
                             </div>
-                            <p class="card-text">Earn 1200xp to be a Legend</p>
+                            <p class="card-text">Earn {{2000- $userXP }} to be a Legend</p>
                         </div>
                     </div>
                     <div class="progress-container">
-                        <div class="progress-sec" style="width: 40%"></div>
+                        {{-- <div class="progress-sec" style="width: {{"userXP"}}"></div> --}}
+                        <div class="progress-sec" role="progressbar" style="width: {{ ($userXP / 2000) * 100 }}%;" aria-valuenow="{{ $userXP }}" aria-valuemin="0" aria-valuemax="2000"></div>
                     </div>
                 </div>
 
