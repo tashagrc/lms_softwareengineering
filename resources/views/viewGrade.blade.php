@@ -22,6 +22,7 @@
         <label class="lblClass" for="classroom">Class</label>
         <div class = "ddButton">
             <select class="ddClass" name="classroom" id="classroom">
+                <option value="{{ $class->id }}" hidden="hidden" selected>{{ $class->ClassroomName }}</option>
                 @foreach ($classrooms as $classroom)
                     <option value="{{ $classroom->ClassroomID}}">{{ $classroom->ClassroomName }}</option>
                 @endforeach

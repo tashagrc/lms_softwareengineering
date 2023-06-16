@@ -9,6 +9,10 @@ use PDO;
 class Quiz extends Model
 {
     use HasFactory;
+    protected $table = 'quizzes';
+    protected $primaryKey = 'QuizId';
+    protected $timestamp = true;
+    protected $guarded = [];
 
     public function questions()
     {
@@ -37,8 +41,6 @@ class Quiz extends Model
     public function sessions(){
         return $this->belongsTo(Session::class);
     }
-
-    protected $primaryKey = 'QuizID';
 
 }
 
