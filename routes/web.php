@@ -15,7 +15,8 @@ use App\Http\Controllers\CreateQuiz2Controller;
 use App\Http\Controllers\CreateQuiz3Controller;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ViewGradeTeacherController;
-use App\Https\Controllers\CreateQuiz4Controller;
+use App\Http\Controllers\CreateQuiz4Controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,10 +48,9 @@ Route::get('/createQuiz1', [CreateQuiz1Controller::class, 'index']);
 Route::get('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'ClassCourse']);
 // Route::post('/createQuiz1/createQuiz2/{classId}', [CreateQuiz2Controller::class, 'storePage2'])->name('cq2');
 
-Route::get('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'CourseSessions']);
+Route::get('/createQuiz1/createQuiz2/createQuiz3/{CourseId}/{ClassId}', [CreateQuiz3Controller::class, 'CourseSessions']);
 // Route::post('/createQuiz1/createQuiz2/createQuiz3/{SessionId}', [CreateQuiz3Controller::class, 'storePage3'])->name('cq3');
 
-Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo']);
 // Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storePage3'])->name('cq4');
 
 Route::get('/quizList/quizDetails/{QuizID}', [QuizController::class, 'quizDetails']);
@@ -64,6 +64,9 @@ Route::post('/save-answers/{QuizID}', [QuestionController::class, 'saveAnswers']
 Route::match(['get', 'post'], '/quizStudentSuccess/{QuizID}', [QuestionController::class, 'updateXP'])->name('success.xp');
 
 Route::get('/achievement', [AchievementController::class, 'show']);
+
+
+
 
 // Route::get('/grade', function () {
 //     return view('viewGrade');
@@ -86,9 +89,10 @@ Route::get('/grade2', [Grade2Controller::class, 'index']);
 
 Route::match(['get', 'post', 'put', 'patch'], '/editProfile', [UserController::class, 'editProfile']);
 
-Route::get('/createQuiz4', function () {
-    return view('createQuiz4');
-});
+Route::get('/createQuiz4/{SessionId}/{CourseId}/{ClassId}', [CreateQuiz4Controller::class, 'createQuiz4']);
+// Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'createQuiz4'])->name('createQuiz4.createQuiz4');
+Route::post('/createQuiz4', [CreateQuiz4Controller::class, 'storeQuizInfo'])->name('createQuiz4.storeQuizInfo');
+
 
 Route::get('/createQuiz5', function () {
     return view('createQuiz5');

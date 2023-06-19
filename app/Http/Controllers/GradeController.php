@@ -24,13 +24,17 @@ class GradeController extends Controller
 
     public function processViewGrade(Request $request)
     {
+        // dd($request);
         $classroomID = $request->input('classroom');
         $students = UserQuiz::whereHas('user', function ($query) use ($classroomID) {
             $query->where('ClassroomID', $classroomID);
         })->get();
 
         $classrooms = Classroom::all();
+        $class = Classroom::where('ClassroomID',$request->classroom)->first();
 
-        return view('viewGrade', compact('classrooms', 'students'));
+        // dd($class);
+
+        return view('viewGrade', compact('classrooms', 'students', 'class'));
     }
 }
