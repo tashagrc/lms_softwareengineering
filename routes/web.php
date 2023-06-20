@@ -114,3 +114,6 @@ Route::get('navbar4', function() {
     return view('layouts/navbarFour');
 });
 
+Route::get('/inputGrade', function () {
+    return view('inputGrade');
+});
