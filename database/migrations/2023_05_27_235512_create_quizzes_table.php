@@ -18,8 +18,8 @@ class CreateQuizzesTable extends Migration
             $table->string('QuizTitle', 255);
             $table->string('QuizArticle', 2000);
             $table->date('QuizDate');
-            $table->timestamp('QuizStart')->nullable();
-            $table->timestamp('QuizEnd')->nullable();
+            $table->time('QuizStart')->nullable();
+            $table->time('QuizEnd')->nullable();
             $table->string('QuizPrepare', 255)->nullable();
             $table->unsignedBigInteger('SessionID');
             $table->unsignedBigInteger('CourseID');

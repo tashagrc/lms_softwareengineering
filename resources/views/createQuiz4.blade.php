@@ -57,28 +57,33 @@
                 </div>
             </div> --}}
         </div>
-        <form action="" method="POST" onsubmit="return confirm('Are you want to create this quiz?');">
+        <form method="POST" action="{{ route('createQuiz4.storeQuizInfo') }}" onsubmit="return confirm('Are you want to create this quiz?')" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="sessionid" value="{{ $SessionId }}">
+            <input type="hidden" name="courseid" value="{{ $CourseId }}">
+            <input type="hidden" name="classid" value="{{ $ClassId }}">
+
             <div class="content">
                 <div class="content-wrap">
                     <h1 class="title-margin"> Add quiz detail </h1>
                     <div class="spaceInput">
                         <div class="label">
                             <div class="horizontal">
-                                <p> Quiz Name </p>
+                                <p> Quiz Name</p>
                                 <p class="warna-pas">*</p>
                             </div>
-    
+
                         </div>
-                        <input type="text" id="QuizName" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                        <input type="text" id="QuizName" name ="QuizTitle" class = "lengthBox" autocomplete="off" required>
                     </div>
                     <div class="spaceInput">
                         <div class="label">
                             <div class="horizontal">
                                 <p> Informations </p>
                             </div>
-    
+
                         </div>
-                        <textarea id="QuizInformations" name="QuizInformations" rows="6" class="lengthBox2"></textarea>
+                        <textarea id="QuizPrepare" name="QuizPrepare" rows="6" class="lengthBox2"></textarea>
                     </div>
                     <div class="spaceInput2">
                         <div class = "horizontal-col">
@@ -87,7 +92,7 @@
                                     <div class="horizontal">
                                         <p> Date </p>
                                     </div>
-    
+
                                 </div>
                                 <input type="date" id="QuizDate" name="QuizDate" class="lengthBox3">
                             </div>
@@ -96,7 +101,7 @@
                                     <div class="horizontal">
                                         <p> Start Time </p>
                                     </div>
-    
+
                                 </div>
                                 <input type="time" id="QuizStart" name="QuizStart" class="lengthBox3">
                             </div>
@@ -127,7 +132,7 @@
                             </div>
                         </div>
                         <textarea id="QuizArticle" name="QuizArticle" rows="6" class="lengthBox2"></textarea>
-    
+
                     </div>
                     <div class="spaceInput">
                         <div class="label">
@@ -136,7 +141,7 @@
                                 <p class="warna-pas">*</p>
                             </div>
                         </div>
-                        <input type="text" id="QuizQuestion1" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                        <input type="text" id="QuizQuestion1" name ="QuizName1" class = "lengthBox" autocomplete="off" required>
                     </div>
                     <div class="spaceInput">
                         <div class="label">
@@ -145,7 +150,7 @@
                                 <p class="warna-pas">*</p>
                             </div>
                         </div>
-                        <input type="text" id="QuizQuestion2" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                        <input type="text" id="QuizQuestion2" name ="QuizName2" class = "lengthBox" autocomplete="off" required>
                     </div>
                     <div class="spaceInput">
                         <div class="label">
@@ -154,13 +159,13 @@
                                 <p class="warna-pas">*</p>
                             </div>
                         </div>
-                        <input type="text" id="QuizQuestion3" name ="QuizName" class = "lengthBox" autocomplete="off" required>
+                        <input type="text" id="QuizQuestion3" name ="QuizName3" class = "lengthBox" autocomplete="off" required>
                     </div>
                 </div>
                 </div>
             </div>
             <div class="action-button">
-                <button class="savecontinue" type="submit"><a href="/createQuiz1">Save & Continue</a></button>
+                <button class="savecontinue" type="submit">Save & Continue</button>
             </div>
         </form>
     </div>

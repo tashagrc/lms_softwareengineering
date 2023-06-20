@@ -47,11 +47,11 @@
                           <h5 class="card-title fw-bold">Badges</h5>
                             @foreach($badges as $b)
                                 <a href="#" class="btn w-100 my-2" style="background-color:#FEF7F7">
-                                    <div class="details d-flex">
+                                    <div class="details d-flex align-items-center py-2">
                                         <img class="mx-3" src="{{ asset('img/star.svg') }}" alt="description of myimage" class="star" width="50px">
                                         <div class="text-start">
-                                            <p class="fw-bold">{{$b["BadgesName"]}}</p>
-                                            <p>{{$b["BadgesDescription"]}}</p>
+                                            <p class="fw-bold m-0">{{$b["BadgesName"]}}</p>
+                                            <p class="m-0">{{$b["BadgesDescription"]}}</p>
                                         </div>
                                     </div>
 
@@ -64,11 +64,11 @@
                           <h5 class="card-title fw-bold">Leaderboard</h5>
                           @foreach($leaderboard as $user)
                           <a href="#" class="btn w-100 my-2" style="background-color:#FEF7F7">
-                              <div class="details d-flex">
+                              <div class="details d-flex align-items-center py-2">
                                   <img class="me-3 align-self-start" src="{{ asset('img/profile.svg') }}" alt="description of myimage" class="star" style="max-width: 50px; height: auto;">
                                   <div class="text-start">
-                                    <p>{{$user["UserName"]}}</p>
-                                    <p>{{$user["UserXP"]}}</p>
+                                    <p class="m-0">{{$user["UserName"]}}</p>
+                                    <p class="m-0">{{$user["UserXP"]}}</p>
                                   </div>
                               </div>
 

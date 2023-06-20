@@ -7,13 +7,16 @@ use Illuminate\Http\Request;
 
 class CreateQuiz3Controller extends Controller
 {
-    public function CourseSessions($CourseId){
+    public function CourseSessions($CourseId,$ClassId){
+        // dd($CourseId,$ClassId);
         $sessions = Session::join('courses', 'courses.CourseID', '=', 'sessions.CourseID')
             ->where('sessions.CourseID', $CourseId)
             ->get(['sessions.SessionID', 'sessions.SessionTopic']);
 
         return view('createQuiz3', [
-            'sessions' => $sessions
+            'sessions' => $sessions,
+            'CourseId' => $CourseId,
+            'ClassId' => $ClassId
         ]);
     }
 
