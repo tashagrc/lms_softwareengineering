@@ -23,7 +23,7 @@
                             <p>Quiz</p>
                         </div>
                     </a>
-                    <a href="{{url('/grade')}}" class="button-link">
+                    <a href="{{url('/inputGrade')}}" class="button-link">
                         <div class="grade">
                             <img src="{{ asset('img/grade.png') }}" alt="description of myimage">
                             <p>Grade</p>

@@ -24,7 +24,7 @@
                 <th>Title</th>
                 <th>Finished At</th>
                 <th>Score</th>
-                <th>Detail</th>
+                {{-- <th>Detail</th> --}}
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@
                     <td>{{ $g["QuizTitle"]}}</td>
                     <td>{{ $g["FinishedDateTime"]}}</td>
                     <td>{{$g["QuizScore"]}}</td>
-                    <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td>
+                    {{-- <td><a href="{{ route('viewGradeDetail', ['id' => $g->UserId]) }}">View</a></td> --}}
                 </tr>
                 @php
                     $numeral++;
