@@ -1,0 +1,84 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #fef7f7;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.ppa{
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+.user-data h1{
+    font-size: 25px;
+}
+
+.user-data h2{
+    font-size: 15px;
+}
+
+.bottom2{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+.answers2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.answers2h1{
+    font-size: 20px;
+    color: white;
+    background-color: #c93b25;
+    padding: 10px 10px 10px 20px;
+    border-radius: 20px;
+}
+
+.answers2 p{
+    background-color: #fef7f7;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: justify;
+}
+
+.inputbox{
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.inputbox h1{
+    font-size: 18px;
+    color: #c93b25;
+}
+
+.boxedit{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.savegrade{
+    margin-top: 20px;
+    background-color: #c93b25;
+    border: 1px solid #c93b25;
+    padding: 8px 0px;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.savegrade a{
+    text-decoration: none;
+    color: white;
+}

@@ -37,4 +37,9 @@ class GradeController extends Controller
 
         return view('viewGrade', compact('classrooms', 'students', 'class'));
     }
+
+    public function showInputGrade()
+    {
+        return view('inputGrade');
+    }
 }

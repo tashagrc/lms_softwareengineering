@@ -32,6 +32,7 @@ use App\Http\Controllers\CreateQuiz4Controller;
 Route::get('/', function () {
     return view('landingPage');
 });
+Route::get('/inputGrade', [GradeController::class, 'showInputGrade']);
 
 Route::get('/dashboard', [DashboardController::class, 'show'])->middleware('auth');
 
@@ -118,6 +119,4 @@ Route::get('navbar4', function() {
     return view('layouts/navbarFour');
 });
 
-Route::get('/inputGrade', function () {
-    return view('inputGrade');
-});
+
